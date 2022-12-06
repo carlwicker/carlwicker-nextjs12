@@ -8,7 +8,7 @@ interface IHeader {
 
 export default function Header({ setIsOpen, isOpen }: IHeader) {
   return (
-    <div className="absolute flex w-full s p-5 text-black justify-between items-center">
+    <div className="absolute container flex p-5 text-black justify-between items-center">
       <div className="text-base font-thin titlecase">
         <Link href={"/"} className="cursor-pointer">
           Carl Wicker

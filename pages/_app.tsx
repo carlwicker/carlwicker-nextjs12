@@ -8,7 +8,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Header isOpen={isOpen} setIsOpen={setIsOpen} />
+      <div className="container mx-auto">
+        <Header isOpen={isOpen} setIsOpen={setIsOpen} />
+      </div>
 
       <Component {...pageProps} />
     </>
