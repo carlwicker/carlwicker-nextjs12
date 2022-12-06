@@ -1,5 +1,5 @@
-import NextJsLogo from "../../components/NextJsLogo";
-import TailwindCssLogo from "../../components/TailwindCssLogo";
+import NextJsLogo from "./NextJsLogo";
+import TailwindCssLogo from "./TailwindCssLogo";
 
 export default function Footer() {
   return (
