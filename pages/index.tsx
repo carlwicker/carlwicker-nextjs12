@@ -1,6 +1,24 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyC-9F5ADsRl1ehqvlp5yaGDG0T8K69VqOA",
+  authDomain: "carlwicker-nextjs12.firebaseapp.com",
+  projectId: "carlwicker-nextjs12",
+  storageBucket: "carlwicker-nextjs12.appspot.com",
+  messagingSenderId: "54906668271",
+  appId: "1:54906668271:web:e5a0ecf6153405d1b1871a",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -17,7 +35,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing{" "}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
 
@@ -60,12 +78,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
+  );
 }
