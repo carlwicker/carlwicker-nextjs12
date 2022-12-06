@@ -23,7 +23,7 @@ import Footer from "../components/Footer/Footer";
 
 export default function Home() {
   return (
-    <div>
+    <div style={{ overflow: "hidden" }}>
       <Section1 />
       <Section2 />
       <Section3 />
