@@ -1,6 +1,11 @@
 export default function TailwindCssLogo() {
   return (
-    <a href="https://tailwindcss.com/" target={"_blank"} rel="noreferrer">
+    <a
+      href="https://tailwindcss.com/"
+      target={"_blank"}
+      rel="noreferrer"
+      className="opacity-50 hover:opacity-100 ease-in transition duration-500"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="#ffffff"

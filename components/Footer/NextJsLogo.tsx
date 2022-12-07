@@ -1,6 +1,11 @@
 export default function NextJsLogo() {
   return (
-    <a href="http://www.nextjs.org" target={"_blank"} rel="noreferrer">
+    <a
+      href="http://www.nextjs.org"
+      target={"_blank"}
+      rel="noreferrer"
+      className="opacity-50 hover:opacity-100 ease-in transition duration-500"
+    >
       <svg
         width="60px"
         height="30px"
