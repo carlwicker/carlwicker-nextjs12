@@ -8,19 +8,9 @@ export default function Footer() {
         backgroundColor: "#111",
         height: "300px",
         width: "100%",
-        marginTop: "auto",
-        display: "flex",
-        alignItems: "center",
       }}
     >
-      <div
-        className="flex flex-col text-stone-600 text-xs mx-auto px-10 items-center  scale-100 container p-10"
-        style={{
-          backgroundColor: "#111",
-          height: "250px",
-          left: "150px",
-        }}
-      >
+      <div className="container flex flex-col text-stone-600 text-xs mx-auto px-10 items-center p-10">
         <div className="container flex flex-col gap-5" id="contact">
           <div className="flex flex-col gap-1">
             <div className="justify-left w-full">Carl Wicker</div>
@@ -31,6 +21,7 @@ export default function Footer() {
             <div className="justify-left w-full">
               Mobile: +44 (0) 7810 830237
             </div>
+            <br />
             <div className="justify-left w-full">
               Email:{" "}
               <a
@@ -38,6 +29,15 @@ export default function Footer() {
                 className="hover:text-white duration-500 ease-in transition"
               >
                 carlwicker@gmail.com
+              </a>
+            </div>
+            <div className="justify-left w-full">
+              Web:{" "}
+              <a
+                href="http://carlwicker.co.uk"
+                className="hover:text-white duration-500 ease-in transition"
+              >
+                http://carlwicker.co.uk{" "}
               </a>
             </div>
           </div>

@@ -18,7 +18,7 @@ export default function Section2() {
             UX
           </h2>
           <hr className="border-t-[1px] border-stone-600 border-dashed" />
-          <div className="font-thin">
+          <div className="font-thin pt-5">
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Recusandae culpa sit, nesciunt optio explicabo at quo, quasi non
@@ -54,7 +54,7 @@ export default function Section2() {
             UI
           </h2>
           <hr className="border-t-[1px] border-stone-700 border-dashed" />
-          <div className="font-thin">
+          <div className="font-thin pt-5">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
               repellendus deserunt voluptatem earum in dolores. Nulla ea nam
@@ -91,7 +91,7 @@ export default function Section2() {
             DEV
           </h2>
           <hr className="border-t-[1px] border-stone-800 border-dashed" />
-          <div className="font-thin">
+          <div className="font-thin pt-5">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum,
               qui vitae quos optio repellat inventore fugit exercitationem unde?
