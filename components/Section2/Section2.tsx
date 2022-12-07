@@ -4,12 +4,13 @@ export default function Section2() {
       style={{
         backgroundColor: "#ddd",
         borderTop: "1px solid white",
+        boxShadow: "20px 25px 45px rgba(0, 0, 0, 0.25)",
       }}
       className="flex flex-col justify-center font-black w-full min-h-screen rotate-3 scale-125 overflow-hidden"
     >
-      <div className="container mx-auto flex flex-col lg:flex-row p-5 scale-75">
+      <div className="container mx-auto flex flex-col lg:flex-row p-5 scale-75 lg:gap-5 xl:gap-10">
         {/* UX */}
-        <div className="p-5 -rotate-3 hover:scale-105 ease-in duration-200">
+        <div className="p-5 -rotate-3 hover:scale-105 ease-in duration-200 ">
           <h2
             className="text-9xl text-stone-600 font-black"
             style={{ fontFamily: "times" }}
