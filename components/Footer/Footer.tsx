@@ -21,7 +21,7 @@ export default function Footer() {
           left: "150px",
         }}
       >
-        <div className="container flex flex-col gap-5">
+        <div className="container flex flex-col gap-5" id="contact">
           <div className="flex flex-col gap-1">
             <div className="justify-left w-full">Carl Wicker</div>
             <div className="justify-left w-full">
@@ -31,11 +31,17 @@ export default function Footer() {
             <div className="justify-left w-full">
               Mobile: +44 (0) 7810 830237
             </div>
-            <div className="justify-left w-full hover:text-white duration-500 ease-in transition">
-              <a href="mailto:carlwicker@gmail.com">carlwicker@gmail.com</a>
+            <div className="justify-left w-full">
+              Email:{" "}
+              <a
+                href="mailto:carlwicker@gmail.com"
+                className="hover:text-white duration-500 ease-in transition"
+              >
+                carlwicker@gmail.com
+              </a>
             </div>
           </div>
-          <hr className="border-t-1 border-stone-600 opacity-30 w-full border-dashed" />
+          <hr className="border-t-1 border-stone-600 opacity-20 w-full border-dashed" />
           <div className=" flex items-center gap-2 justify-end">
             <div className="whitespace-nowrap">Made with</div>
             <NextJsLogo />

@@ -10,7 +10,7 @@ export default function Section2() {
     >
       <div className="container mx-auto flex flex-col lg:flex-row p-5 scale-75 lg:gap-5 xl:gap-10">
         {/* UX */}
-        <div className="p-5 -rotate-3 hover:scale-105 ease-in duration-200 ">
+        <div className="p-5 -rotate-3">
           <h2
             className="text-9xl text-stone-600 font-black"
             style={{ fontFamily: "times" }}
@@ -46,7 +46,7 @@ export default function Section2() {
           </div>
         </div>
         {/* UI */}
-        <div className="p-5 -rotate-3 hover:scale-105 ease-in duration-200">
+        <div className="p-5 -rotate-3">
           <h2
             className="text-9xl text-stone-700 font-black "
             style={{ fontFamily: "times" }}
@@ -83,7 +83,7 @@ export default function Section2() {
           </div>
         </div>
         {/* DEV */}
-        <div className="p-5 -rotate-3 hover:scale-105 ease-in duration-200">
+        <div className="p-5 -rotate-3">
           <h2
             className="text-9xl text-stone-800 font-black"
             style={{ fontFamily: "times" }}

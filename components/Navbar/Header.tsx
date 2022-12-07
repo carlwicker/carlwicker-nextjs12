@@ -30,7 +30,7 @@ export default function Header({ setIsOpen, isOpen }: IHeader) {
             Resume
           </button>
         </Link>
-        <Link href={"/contact"}>
+        <Link href={"/#contact"}>
           <button className="text-xs p-2 hover:text-gray-500 transition ease-in duration-200">
             Contact
           </button>
