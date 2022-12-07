@@ -10,9 +10,9 @@ export default function Footer() {
         width: "100%",
       }}
     >
-      <div className="container flex flex-col text-stone-600 text-xs mx-auto px-10 items-center p-10">
+      <div className="container flex flex-col text-stone-600 text-xs mx-auto px-10 items-center p-5">
         <div className="container flex flex-col gap-5" id="contact">
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 p-5">
             <div className="justify-left w-full">Carl Wicker</div>
             <div className="justify-left w-full">
               10B Bloomsbury Place, Brighton, BN2 1DA, UK
@@ -41,8 +41,8 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <hr className="border-t-1 border-stone-600 opacity-20 w-full border-dashed" />
-          <div className=" flex items-center gap-2 justify-end">
+          <hr className="border-t-1 border-stone-600 opacity-10 w-full border-solid" />
+          <div className=" flex items-center gap-2 px-5 justify-center">
             <div className="whitespace-nowrap">Made with</div>
             <NextJsLogo />
             <div> & </div>

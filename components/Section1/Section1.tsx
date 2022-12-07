@@ -29,7 +29,7 @@ export default function Section1() {
         >
           UX UI DEV
         </h1>
-        <p className="p-5  text-white drop-shadow-md">
+        <p className="p-5 text-black drop-shadow-lg tracking-widest text-sm">
           Adobe Creative, Figma, HTML, CSS, TailwindCSS, JavaScript, ReactJS,
           NextJS & Google Cloud Architechure
         </p>
