@@ -1,3 +1,5 @@
+// IMPROVE ROTATION CSS, SHOULD COUNTER ROTATE DIV CONTAINING ELEMENTS
+
 export default function Section2() {
   return (
     <section
@@ -17,7 +19,7 @@ export default function Section2() {
           >
             UX
           </h2>
-          <hr className="border-t-[1px] border-stone-600 border-dashed" />
+          <hr className="border-t-[1px] border-stone-600 border-solid" />
           <div className="font-thin pt-5">
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -31,18 +33,6 @@ export default function Section2() {
               dignissimos! Ratione assumenda eveniet, magni nulla quo animi hic
               pariatur porro, sequi itaque error vero?
             </p>
-            <p>
-              Ratione voluptate harum repudiandae necessitatibus? Tempora ad,
-              quibusdam voluptates accusamus quo quidem, iusto ratione, impedit
-              odit dignissimos dicta minima. Aut rerum distinctio, porro aliquid
-              cupiditate tempore molestias repudiandae quia hic?
-            </p>
-            <p>
-              Natus nostrum nemo animi earum officiis vero, rerum possimus
-              asperiores expedita hic, corrupti commodi atque quo facere
-              mollitia? Porro itaque cum quibusdam corporis debitis in ex
-              facilis quae rem natus!
-            </p>
           </div>
         </div>
         {/* UI */}
@@ -53,7 +43,7 @@ export default function Section2() {
           >
             UI
           </h2>
-          <hr className="border-t-[1px] border-stone-700 border-dashed" />
+          <hr className="border-t-[1px] border-stone-700 border-solid" />
           <div className="font-thin pt-5">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
@@ -67,19 +57,6 @@ export default function Section2() {
               enim, corporis, distinctio minima. Ad maiores eligendi culpa
               dolorem sint incidunt.
             </p>
-            <p>
-              Tempore delectus labore illum dolor pariatur architecto,
-              perferendis necessitatibus est aliquid nihil, atque inventore
-              praesentium, sequi quibusdam cumque cum illo repellendus sit
-              maxime reiciendis nemo facere voluptatum aspernatur. Dolore,
-              debitis.
-            </p>
-            <p>
-              Vitae voluptatem ipsum dicta beatae nam earum eius, ea fugiat
-              quibusdam minus fugit. Ex blanditiis, eaque sit consectetur
-              corrupti maxime accusantium, tempora aut error temporibus dolorum
-              tenetur, obcaecati mollitia veniam.
-            </p>
           </div>
         </div>
         {/* DEV */}
@@ -90,7 +67,7 @@ export default function Section2() {
           >
             DEV
           </h2>
-          <hr className="border-t-[1px] border-stone-800 border-dashed" />
+          <hr className="border-t-[1px] border-stone-800 border-solid" />
           <div className="font-thin pt-5">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum,
@@ -103,18 +80,6 @@ export default function Section2() {
               vitae atque dicta recusandae, aperiam deleniti fuga officia itaque
               corrupti tenetur exercitationem sint necessitatibus odio eligendi
               nemo perspiciatis. Dignissimos, illum veritatis!
-            </p>
-            <p>
-              Qui tempore, dicta amet est eaque sapiente eius culpa cupiditate.
-              Facere necessitatibus harum vero veniam ad distinctio laborum
-              cupiditate quia eveniet qui ex ipsam, dolor dicta. Delectus nemo
-              voluptatem sequi!
-            </p>
-            <p>
-              Alias libero delectus repellendus eum iste neque et laborum
-              eligendi placeat. Magni inventore officia assumenda accusamus rem
-              illo. Nisi ad eum iusto pariatur? Aliquid quibusdam optio ea nam,
-              veniam aperiam.
             </p>
           </div>
         </div>
