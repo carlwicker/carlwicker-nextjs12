@@ -37,6 +37,10 @@ a {
   box-sizing: border-box;
 }
 
+p {
+  padding-bottom: 30px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
   }
