@@ -25,7 +25,7 @@ export default function Section1() {
           className="uppercase font-black text-white text-9xl tracking-tighter scale-150 drop-shadow-md mx-auto"
           style={{ fontFamily: "times" }}
         >
-          UX UI DEV
+          UX UI IO
         </h1>
         <p className="p-5 text-black drop-shadow-lg tracking-widest text-sm">
           Adobe Creative, Figma, HTML, CSS, TailwindCSS, JavaScript, ReactJS,

@@ -6,80 +6,86 @@ export default function Section2() {
       style={{
         boxShadow: "20px 25px 45px rgba(0, 0, 0, 0.25)",
       }}
-      className="bg-[#ddd] border-t-[2px] flex flex-col justify-center font-black w-full  rotate-3 scale-125 overflow-hidden"
+      className="bg-[#ddd] border-t-[2px] flex flex-col justify-center font-black w-full lg:rotate-3 lg:scale-125 overflow-hidden"
     >
-      <div className="container mx-auto scale-75  xl:gap-10">
+      <div className="container mx-auto lg:scale-75 xl:gap-10">
         {/* UX */}
-        <div className="-rotate-3 flex flex-col lg:flex-row lg:gap-5">
-          <div className="p-5">
+        <div className="lg:-rotate-3 lg:gap-5 py-[200px] lg:py-0 ">
+          <div className="flex gap-5 justify-center flex-col mx-auto p-5  lg:flex-row">
             <h2
-              className="text-9xl text-stone-600 font-black"
               style={{ fontFamily: "times" }}
+              className="text-9xl text-stone-400 font-black flex lg:w-[200px] lg:justify-center"
             >
               UX
             </h2>
-            <hr className="border-t-[1px] border-stone-600 border-solid" />
-            <div className="font-thin pt-5">
+            <div className="font-thin lg:p-4 lg:w-1/3">
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Recusandae culpa sit, nesciunt optio explicabo at quo, quasi non
-                illo debitis eveniet earum natus. Necessitatibus quia odit iure!
-                Repudiandae, nam officia!
+                Photo booth narwhal tofu la croix kogi letterpress activated
+                charcoal crucifix umami ethical fit single-origin coffee art
+                party kinfolk. Biodiesel etsy la croix tumblr organic
+                vexillologist subway tile vegan pinterest. Kitsch flexitarian
+                trust fund disrupt. Kickstarter you probably haven't heard of
+                them lomo viral. Shoreditch crucifix YOLO, cardigan viral venmo
+                vinyl brunch vexillologist chicharrones shaman bitters. Shabby
+                chic blog fanny pack chambray mustache. Coloring book retro
+                hashtag selfies slow-carb tonx, craft beer vexillologist mukbang
+                keffiyeh distillery mumblecore 8-bit austin.
               </p>
               <p>
-                Culpa facere doloribus, sapiente eligendi beatae, dolores
-                assumenda minima quidem est sequi adipisci, excepturi atque
-                dignissimos! Ratione assumenda eveniet, magni nulla quo animi
-                hic pariatur porro, sequi itaque error vero?
+                Ugh meh roof party, readymade lo-fi tumblr skateboard yes plz
+                whatever. Green juice tonx neutra, VHS DSA distillery palo santo
+                next level kickstarter affogato put a bird on it fam tilde.
               </p>
             </div>
           </div>
+
           {/* UI */}
-          <div className="p-5">
+          <div className="flex gap-5 justify-center flex-col lg:flex-row mx-auto p-5">
             <h2
-              className="text-9xl text-stone-700 font-black "
               style={{ fontFamily: "times" }}
+              className="text-9xl text-stone-500 font-black flex lg:justify-center lg:w-[200px]"
             >
               UI
             </h2>
-            <hr className="border-t-[1px] border-stone-700 border-solid" />
-            <div className="font-thin pt-5">
+            <div className="font-thin lg:p-4 lg:w-1/3">
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
-                repellendus deserunt voluptatem earum in dolores. Nulla ea nam
-                veritatis commodi deserunt ab voluptas quas accusantium
-                accusamus, necessitatibus distinctio deleniti nesciunt!
+                Actually trust fund pok pok unicorn YOLO edison bulb. Ugh art
+                party 8-bit church-key brunch, snackwave cardigan af iPhone.
+                Small batch sustainable flannel plaid gatekeep flexitarian
+                mumblecore artisan. Godard microdosing scenester affogato synth
+                flexitarian, four loko typewriter readymade pinterest actually 3
+                wolf moon air plant swag.
               </p>
               <p>
-                Ut vitae eaque ratione ea illo aperiam sit molestias doloremque
-                accusamus harum assumenda, perspiciatis neque et nobis animi
-                minus enim, corporis, distinctio minima. Ad maiores eligendi
-                culpa dolorem sint incidunt.
+                La croix fashion axe live-edge, typewriter ascot enamel pin
+                snackwave flannel try-hard echo park. Cardigan pitchfork put a
+                bird on it skateboard normcore.
               </p>
             </div>
           </div>
+
           {/* DEV */}
-          <div className="p-5">
+          <div className="flex gap-5 justify-center flex-col lg:flex-row mx-auto p-5">
             <h2
-              className="text-9xl text-stone-800 font-black"
               style={{ fontFamily: "times" }}
+              className="text-9xl text-stone-600 font-black flex  lg:w-[200px] lg:justify-center"
             >
-              DEV
+              IO
             </h2>
-            <hr className="border-t-[1px] border-stone-800 border-solid" />
-            <div className="font-thin pt-5">
+            <div className="font-thin lg:p-4 lg:w-1/3">
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum,
-                qui vitae quos optio repellat inventore fugit exercitationem
-                unde? Odio accusantium magni voluptatum dolor culpa adipisci
-                tenetur rem quos cum debitis!
+                Offal tumblr big mood knausgaard Brooklyn taiyaki iceland
+                wayfarers schlitz readymade artisan. Pour-over brunch
+                cold-pressed fanny pack cloud bread snackwave. Jean shorts same
+                green juice pour-over sartorial tumeric.
               </p>
               <p>
-                Similique vel error animi doloremque obcaecati neque sed
-                repellat vitae atque dicta recusandae, aperiam deleniti fuga
-                officia itaque corrupti tenetur exercitationem sint
-                necessitatibus odio eligendi nemo perspiciatis. Dignissimos,
-                illum veritatis!
+                8-bit kale chips green juice roof party. Artisan irony retro
+                swag. Swag ennui messenger bag JOMO, fam tousled offal pork
+                belly woke bitters brunch cliche pour-over art party. Deep v you
+                probably haven't heard of them hot chicken, pour-over waistcoat
+                gluten-free neutra +1 Brooklyn XOXO. Photo booth enamel pin
+                listicle single-origin coffee, pabst plaid tattooed +1 venmo.
               </p>
             </div>
           </div>
