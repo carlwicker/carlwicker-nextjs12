@@ -16,12 +16,11 @@ export default function Section1() {
     <section
       id="paralax"
       style={{
-        // backgroundSize: "fit",
         backgroundPositionY: "-280px",
       }}
-      className="flex w-full bg-cover items-center min-h-screen justify-center bg-[url('/img/pic1.webp')] fit bg-top"
+      className="flex w-full bg-cover items-center min-h-screen justify-center bg-[url('/img/pic1.webp')] fit bg-center"
     >
-      <div className="flex flex-col ease-in duration-1000  mx-auto justify-center align-middle">
+      <div className="flex flex-col ease-in duration-1000  mx-auto justify-center align-middle pointer-events-none">
         <h1
           className="uppercase font-black text-white text-9xl tracking-tighter scale-150 drop-shadow-md mx-auto"
           style={{ fontFamily: "times" }}
