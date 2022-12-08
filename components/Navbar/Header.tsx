@@ -13,10 +13,14 @@ export default function Header({ setIsOpen, isOpen }: IHeader) {
   }, [isOpen]);
 
   return (
-    <div className="absolute container flex p-5 text-black justify-between items-center">
-      <div className="text-base font-thin titlecase">
-        <Link href={"/"} className="cursor-pointer">
-          Carl Wicker
+    <div className=" container flex  justify-between items-center p-5 h-[50px] fixed">
+      <div className="text-base font-bold hover:scale-105 transition ease-out duration-500">
+        <Link
+          href={"/"}
+          className="cursor-pointer text-white"
+          style={{ fontFamily: "times" }}
+        >
+          UX UI IO
         </Link>
       </div>
       <nav className="hidden lg:flex gap-3 font-thin">

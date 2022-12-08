@@ -10,7 +10,7 @@ export default function Section2() {
     >
       <div className="container mx-auto lg:scale-75 xl:gap-10">
         {/* UX */}
-        <div className="lg:-rotate-3 lg:gap-5 py-[200px] lg:py-0 ">
+        <div className="lg:-rotate-3 lg:gap-5 py-[200px] lg:py-0">
           <div className="flex gap-5 justify-center flex-col mx-auto p-5  lg:flex-row">
             <h2
               style={{ fontFamily: "times" }}
@@ -24,7 +24,7 @@ export default function Section2() {
                 charcoal crucifix umami ethical fit single-origin coffee art
                 party kinfolk. Biodiesel etsy la croix tumblr organic
                 vexillologist subway tile vegan pinterest. Kitsch flexitarian
-                trust fund disrupt. Kickstarter you probably haven't heard of
+                trust fund disrupt. Kickstarter you probably havent heard of
                 them lomo viral. Shoreditch crucifix YOLO, cardigan viral venmo
                 vinyl brunch vexillologist chicharrones shaman bitters. Shabby
                 chic blog fanny pack chambray mustache. Coloring book retro
@@ -83,7 +83,7 @@ export default function Section2() {
                 8-bit kale chips green juice roof party. Artisan irony retro
                 swag. Swag ennui messenger bag JOMO, fam tousled offal pork
                 belly woke bitters brunch cliche pour-over art party. Deep v you
-                probably haven't heard of them hot chicken, pour-over waistcoat
+                probably havent heard of them hot chicken, pour-over waistcoat
                 gluten-free neutra +1 Brooklyn XOXO. Photo booth enamel pin
                 listicle single-origin coffee, pabst plaid tattooed +1 venmo.
               </p>

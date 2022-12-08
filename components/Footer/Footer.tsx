@@ -10,8 +10,8 @@ export default function Footer() {
         width: "100%",
       }}
     >
-      <div className="container flex flex-col text-stone-600 text-xs mx-auto px-10 items-center p-5">
-        <div className="container flex flex-col gap-5" id="contact">
+      <div className="container flex flex-col text-stone-600 text-xs mx-auto items-center p-5 ">
+        <div className="flex flex-col gap-5 w-full" id="contact">
           <div className="flex flex-col gap-1 p-5">
             <div className="justify-left w-full">Carl Wicker</div>
             <div className="justify-left w-full">
