@@ -41,7 +41,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <hr className="border-t-1 border-stone-600 opacity-10 w-full border-solid" />
+          <hr className="border-t-1 border-stone-600 opacity-30 w-full border-solid" />
           <div className=" flex items-center gap-2 px-5 justify-center">
             <div className="whitespace-nowrap">Made with</div>
             <NextJsLogo />

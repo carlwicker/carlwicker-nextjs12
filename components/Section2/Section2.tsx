@@ -4,13 +4,11 @@ export default function Section2() {
   return (
     <section
       style={{
-        backgroundColor: "#ddd",
-        borderTop: "1px solid white",
         boxShadow: "20px 25px 45px rgba(0, 0, 0, 0.25)",
       }}
-      className="flex flex-col justify-center font-black w-full min-h-screen rotate-3 scale-125 overflow-hidden"
+      className="bg-[#ddd] border-t-[2px] flex flex-col justify-center font-black w-full  rotate-3 scale-125 overflow-hidden"
     >
-      <div className="container mx-auto  p-5 scale-75  xl:gap-10">
+      <div className="container mx-auto scale-75  xl:gap-10">
         {/* UX */}
         <div className="-rotate-3 flex flex-col lg:flex-row lg:gap-5">
           <div className="p-5">

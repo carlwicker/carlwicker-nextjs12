@@ -16,11 +16,10 @@ export default function Section1() {
     <section
       id="paralax"
       style={{
-        backgroundImage: `url("/img/pic1.webp")`,
-        backgroundSize: "fit",
+        // backgroundSize: "fit",
         backgroundPositionY: "-280px",
       }}
-      className="flex w-full bg-cover items-center min-h-screen justify-center"
+      className="flex w-full bg-cover items-center min-h-screen justify-center bg-[url('/img/pic1.webp')] fit bg-top"
     >
       <div className="flex flex-col ease-in duration-1000  mx-auto justify-center align-middle">
         <h1

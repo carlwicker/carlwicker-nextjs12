@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function MobileMenu() {
   return (
-    <div className=" text-black font-extralight uppercase lg:hidden z-40">
-      <div className="container  mx-auto p-5">
+    <div className="absolute bg-stone-700 text-white w-full z-30 h-1/ font-extralight uppercase lg:hidden p-5 h-[400px]">
+      <div className="container  mx-auto ">
         <div className="flex flex-col">
           <Link
             href={"/"}

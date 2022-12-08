@@ -1,12 +1,17 @@
 import Link from "next/link";
 import Hamburger from "./Hamburger";
+import { useEffect } from "react";
 
 interface IHeader {
   setIsOpen: any;
-  isOpen: any;
+  isOpen: Boolean;
 }
 
 export default function Header({ setIsOpen, isOpen }: IHeader) {
+  useEffect(() => {
+    console.log(isOpen);
+  }, [isOpen]);
+
   return (
     <div className="absolute container flex p-5 text-black justify-between items-center">
       <div className="text-base font-thin titlecase">
@@ -36,8 +41,8 @@ export default function Header({ setIsOpen, isOpen }: IHeader) {
           </button>
         </Link>
       </nav>
-      <div className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
-        <Hamburger />
+      <div className={`lg:hidden z-40`} onClick={() => setIsOpen(!isOpen)}>
+        <Hamburger isOpen={isOpen} />
       </div>
     </div>
   );
