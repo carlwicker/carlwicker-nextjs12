@@ -13,6 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>UX/UI/IO</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta charSet="utf-8" />
       </Head>
       <div className="container">{isOpen && <MobileMenu />}</div>
       <div style={{ overflow: "hidden" }}>
