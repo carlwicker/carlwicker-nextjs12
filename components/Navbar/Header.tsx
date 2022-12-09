@@ -13,8 +13,8 @@ export default function Header({ setIsOpen, isOpen }: IHeader) {
   }, [isOpen]);
 
   return (
-    <div className=" container flex  justify-between items-center p-5 h-[50px] fixed">
-      <div className="text-base font-bold hover:scale-105 transition ease-out duration-500">
+    <div className=" container flex  justify-end items-center p-5 h-[50px] fixed">
+      {/* <div className="text-base font-bold hover:scale-105 transition ease-out duration-500">
         <Link
           href={"/"}
           className="cursor-pointer text-white"
@@ -22,7 +22,7 @@ export default function Header({ setIsOpen, isOpen }: IHeader) {
         >
           UX UI IO
         </Link>
-      </div>
+      </div> */}
       <nav className="hidden lg:flex gap-3 font-thin">
         <Link href={"/about"}>
           <button className="text-xs p-2 hover:text-gray-500 transition ease-in duration-200 ">

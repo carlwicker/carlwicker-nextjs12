@@ -10,12 +10,12 @@ export default function Footer() {
         width: "100%",
       }}
     >
-      <div className="container flex flex-col text-stone-600 text-xs mx-auto items-center p-5 ">
+      <div className="container flex flex-col text-stone-600 text-xs mx-auto items-center ">
         <div className="flex flex-col gap-5 w-full" id="contact">
-          <div className="flex flex-col gap-1 p-5">
+          <div className="flex flex-col gap-1 py-10">
             <div className="justify-left w-full">Carl Wicker</div>
             <div className="justify-left w-full">
-              10B Bloomsbury Place, Brighton, BN2 1DA, UK
+              10B Bloomsbury Place, Brighton, BN2 1DA, UK.
             </div>
             <div className="justify-left w-full">Tel: +44 (0) 1273 244736</div>
             <div className="justify-left w-full">
