@@ -6,26 +6,28 @@ export default function Section1() {
   const [pageWidth, setPageWidth]: any = useState();
 
   useEffect(() => {
-    const parallax: any = document.getElementById("paralax");
-    parallax.style.backgroundPositionY = "-280px";
+    setPageWidth(window.innerWidth);
+    window.addEventListener("resize", () => {
+      setPageWidth(window.innerWidth);
+    });
+  }, [pageWidth]);
 
-    if (pageWidth < 870) {
+  useEffect(() => {
+    const parallax: any = document.getElementById("paralax");
+
+    if (pageWidth > 870) {
+      parallax.style.backgroundPositionY = "-280px";
+    } else {
       parallax.style.backgroundPositionY = "0px";
     }
 
     window.addEventListener("scroll", () => {
       let offset = window.pageYOffset - 400;
-      parallax.style.backgroundPositionY = offset * 0.7 + "px";
-    });
-  }, [pageWidth]);
 
-  useEffect(() => {
-    setPageWidth(window.innerWidth);
-    window.addEventListener("resize", () => {
-      setPageWidth(window.innerWidth);
+      if (pageWidth > 870) {
+        parallax.style.backgroundPositionY = offset * 0.7 + "px";
+      }
     });
-
-    console.log(pageWidth);
   }, [pageWidth]);
 
   return (
