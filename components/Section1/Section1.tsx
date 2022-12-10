@@ -26,6 +26,8 @@ export default function Section1() {
 
       if (pageWidth > 870) {
         parallax.style.backgroundPositionY = offset * 0.7 + "px";
+      } else {
+        parallax.style.backgroundPositionY = 0 + "px";
       }
     });
   }, [pageWidth]);
