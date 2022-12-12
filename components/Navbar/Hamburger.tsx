@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 interface IHamburger {
   isOpen: Boolean;
 }
@@ -7,7 +5,7 @@ interface IHamburger {
 export default function Hamburger({ isOpen }: IHamburger) {
   return (
     <svg
-      className={`cursor-pointer transition ease-in duration-200 lg:hidden z-40 ${
+      className={`cursor-pointer transition ease-in duration-200 lg:hidden ${
         isOpen
           ? "fill-stone-200 hover:fill-red-400"
           : "fill-stone-700 hover:fill-blue-500"

@@ -35,16 +35,13 @@ export default function Section1() {
   return (
     <section
       id="paralax"
-      className="flex w-full bg-cover items-center min-h-screen justify-center bg-[url('/img/pic3.webp')] fit bg-center"
+      className="flex flex-col w-full bg-cover items-center min-h-screen justify-center bg-[url('/img/pic3.webp')] fit bg-center align-middle"
     >
-      <div className="flex flex-col ease-in duration-1000  mx-auto justify-center align-middle pointer-events-none">
-        <h1
-          className="uppercase font-black text-white text-9xl tracking-tighter scale-150 drop-shadow-md mx-auto"
-          style={{ fontFamily: "times" }}
-        >
+      <div className="pointer-events-none">
+        <h1 className="uppercase font-black text-white text-9xl tracking-tighter p-5 scale-150 drop-shadow-md mx-auto break-words w-[300px] sm:w-full text-center">
           UX UI IO
         </h1>
-        <p className="p-5 text-black drop-shadow-lg tracking-widest text-sm">
+        <p className="p-5 text-black drop-shadow-lg tracking-widest text-sm hidden lg:flex">
           Adobe Creative, Figma, HTML, CSS, TailwindCSS, JavaScript, ReactJS,
           NextJS & Google Cloud Architechure
         </p>
