@@ -49,6 +49,26 @@ h1 {
   overflow: hidden;
 }
 
+@keyframes fade-in-bg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    animation-play-state: paused;
+  }
+}
+
+@keyframes fade-in-titles {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    animation-play-state: paused;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   html {
   }

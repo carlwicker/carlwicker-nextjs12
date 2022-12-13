@@ -14,11 +14,11 @@ export default function Header({ setIsOpen, isOpen }: IHeader) {
   }, [isOpen]);
 
   return (
-    <div className=" container flex justify-between items-center p-5 h-[50px] fixed z-50">
+    <div className="fade-in duration-1000 ease-in container flex justify-between items-center p-5 h-[50px] fixed z-50">
       <div className="text-base font-bold hover:scale-105 transition ease-out duration-500 lg:invisible">
         <Link
           href={"/"}
-          className="cursor-pointer text-white"
+          className={`cursor-pointer text-white ${!isOpen && "hidden"} `}
           style={{ fontFamily: "times" }}
         >
           UX UI IO

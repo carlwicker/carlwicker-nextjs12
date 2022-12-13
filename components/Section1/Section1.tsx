@@ -35,13 +35,35 @@ export default function Section1() {
   return (
     <section
       id="paralax"
-      className="flex flex-col w-full bg-cover items-center min-h-screen justify-center bg-[url('/img/pic3.webp')] fit bg-center align-middle"
+      className="flex flex-col w-full bg-cover items-center min-h-screen justify-center bg-[url('/img/pic3.webp')] fit bg-center"
+      style={{ position: "relative", animation: "fade-in-bg 1s ease-in-out" }}
     >
-      <div className="pointer-events-none">
-        <h1 className="uppercase font-black text-white text-9xl tracking-tighter p-5 scale-150 drop-shadow-md mx-auto break-words w-[300px] sm:w-full text-center">
-          UX UI IO
+      <div
+        className="pointer-events-none opacity-0"
+        style={{
+          animation: "fade-in-titles 4s ease-in-out forwards",
+          animationDelay: "500",
+          animationIterationCount: "1",
+        }}
+      >
+        <h1
+          className="uppercase font-black flex text-center text-white tracking-tighter drop-shadow-md justify-center mx-auto break-words md:text-[200px] text-[200px] "
+          style={{ lineHeight: "0.7" }}
+        >
+          <div className="flex flex-col md:flex-row w-full gap-5 justify-center">
+            <div>UX</div>
+            <div>UI</div>
+            <div>IO</div>
+          </div>
         </h1>
-        <p className="p-5 text-black drop-shadow-lg tracking-widest text-sm hidden lg:flex">
+        <p
+          className="p-5 text-black drop-shadow-lg tracking-widest text-sm hidden lg:flex opacity-0"
+          style={{
+            animation: "fade-in-titles 2s ease-in-out forwards",
+            animationDelay: "1s",
+            animationIterationCount: "1",
+          }}
+        >
           Adobe Creative, Figma, HTML, CSS, TailwindCSS, JavaScript, ReactJS,
           NextJS & Google Cloud Architechure
         </p>
