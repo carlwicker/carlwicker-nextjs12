@@ -36,16 +36,8 @@ export default function Section1() {
     <section
       id="paralax"
       className="flex flex-col w-full bg-cover items-center min-h-screen justify-center bg-[url('/img/pic3.webp')] fit bg-center"
-      style={{ position: "relative", animation: "fade-in-bg 1s ease-in-out" }}
     >
-      <div
-        className="pointer-events-none opacity-0"
-        style={{
-          animation: "fade-in-titles 4s ease-in-out forwards",
-          animationDelay: "500",
-          animationIterationCount: "1",
-        }}
-      >
+      <div className="pointer-events-none">
         <h1
           className="uppercase font-black flex text-center text-white tracking-tighter drop-shadow-md justify-center mx-auto break-words md:text-[200px] text-[200px] "
           style={{ lineHeight: "0.7" }}
@@ -56,14 +48,8 @@ export default function Section1() {
             <div>IO</div>
           </div>
         </h1>
-        <p
-          className="p-5 text-black drop-shadow-lg tracking-widest text-sm hidden lg:flex opacity-0"
-          style={{
-            animation: "fade-in-titles 2s ease-in-out forwards",
-            animationDelay: "1s",
-            animationIterationCount: "1",
-          }}
-        >
+
+        <p className="p-5 text-black drop-shadow-lg tracking-widest text-sm hidden lg:flex ">
           Adobe Creative, Figma, HTML, CSS, TailwindCSS, JavaScript, ReactJS,
           NextJS & Google Cloud Architechure
         </p>

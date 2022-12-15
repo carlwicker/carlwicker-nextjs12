@@ -12,7 +12,7 @@ export default function Footer() {
     >
       <div className="container flex flex-col text-stone-600 text-xs mx-auto items-center ">
         <div className="flex flex-col gap-5 w-full" id="contact">
-          <div className="flex flex-col gap-1 py-10">
+          <div className="flex flex-col gap-1 p-5">
             <div className="justify-left w-full">Carl Wicker</div>
             <div className="justify-left w-full">
               10B Bloomsbury Place, Brighton, BN2 1DA, UK.
@@ -37,7 +37,7 @@ export default function Footer() {
                 href="http://carlwicker.co.uk"
                 className="hover:text-white duration-500 ease-in transition"
               >
-                http://carlwicker.co.uk{" "}
+                http://carlwicker.co.uk
               </a>
             </div>
           </div>
@@ -46,7 +46,6 @@ export default function Footer() {
             <div className="whitespace-nowrap">Made with</div>
             <NextJsLogo />
             <div> & </div>
-
             <TailwindCssLogo />
           </div>
         </div>
