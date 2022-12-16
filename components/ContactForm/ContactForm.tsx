@@ -14,16 +14,12 @@ export default function ContactForm() {
       message: Yup.string().required("Message is required."),
     }),
     onSubmit: (values, actions) => {
-      console.log({ values, actions });
-      alert(JSON.stringify(values, null, 2));
-
-      const submitPost = async () => {
+      (async () => {
         const response = await fetch("/api/sendemail", {
           method: "POST",
-          body: JSON.stringify(values, null, 2),
+          body: JSON.stringify(values),
         });
-      };
-      submitPost();
+      })();
 
       actions.setSubmitting(false);
     },
