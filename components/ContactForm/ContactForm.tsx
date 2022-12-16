@@ -16,6 +16,15 @@ export default function ContactForm() {
     onSubmit: (values, actions) => {
       console.log({ values, actions });
       alert(JSON.stringify(values, null, 2));
+
+      const submitPost = async () => {
+        const response = await fetch("/api/sendemail", {
+          method: "POST",
+          body: JSON.stringify(values, null, 2),
+        });
+      };
+      submitPost();
+
       actions.setSubmitting(false);
     },
   });

@@ -16,9 +16,9 @@ export default function handler(
     const msg = {
       to: "carlwicker@gmail.com", // Change to your recipient
       from: "hello@carlwicker.co.uk", // Change to your verified sender
-      subject: "Sending with SendGrid is Fun",
-      text: "3432324324",
-      html: "3432324324",
+      subject: "Message from website",
+      text: req.body,
+      html: req.body,
     };
 
     console.log(msg);
