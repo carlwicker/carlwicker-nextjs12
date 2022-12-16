@@ -12,6 +12,8 @@ const nextConfig = {
     storageBucket: "carlwicker-nextjs12.appspot.com",
     messagingSenderId: "54906668271",
     appId: "1:54906668271:web:e5a0ecf6153405d1b1871a",
+    SENDGRID_API_KEY:
+      "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",
   },
 };
 

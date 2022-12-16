@@ -13,8 +13,10 @@ export default function ContactForm() {
         .email("Must contain an email address"),
       message: Yup.string().required("Message is required."),
     }),
-    onSubmit: (values) => {
-      console.log(JSON.stringify(values, null, 2));
+    onSubmit: (values, actions) => {
+      console.log({ values, actions });
+      alert(JSON.stringify(values, null, 2));
+      actions.setSubmitting(false);
     },
   });
 
