@@ -6,14 +6,14 @@ const nextConfig = {
     unoptimized: true,
   },
   env: {
-    apiKey: "AIzaSyC-9F5ADsRl1ehqvlp5yaGDG0T8K69VqOA",
-    authDomain: "carlwicker-nextjs12.firebaseapp.com",
-    projectId: "carlwicker-nextjs12",
-    storageBucket: "carlwicker-nextjs12.appspot.com",
-    messagingSenderId: "54906668271",
-    appId: "1:54906668271:web:e5a0ecf6153405d1b1871a",
-    SENDGRID_API_KEY:
-      "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",
+    NEXT_PUBLIC_apiKey: "AIzaSyC-9F5ADsRl1ehqvlp5yaGDG0T8K69VqOA",
+    NEXT_PUBLIC_authDomain: "carlwicker-nextjs12.firebaseapp.com",
+    NEXT_PUBLIC_projectId: "carlwicker-nextjs12",
+    NEXT_PUBLIC_storageBucket: "carlwicker-nextjs12.appspot.com",
+    NEXT_PUBLIC_messagingSenderId: "54906668271",
+    NEXT_PUBLIC_appId: "1:54906668271:web:e5a0ecf6153405d1b1871a",
+    NEXT_PUBLIC_SENDGRID_API_KEY:
+      "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",
   },
 };
 
