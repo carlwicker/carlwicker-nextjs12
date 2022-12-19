@@ -15,7 +15,7 @@ export default function ContactForm() {
     }),
     onSubmit: (values, actions) => {
       (async () => {
-        const response = await fetch("/api/sendemail", {
+        const response = await fetch("/api/sendmail", {
           method: "POST",
           body: JSON.stringify(values),
         });
@@ -30,16 +30,22 @@ export default function ContactForm() {
       style={{
         boxShadow: "20px 25px 45px rgba(0, 0, 0, 0.25)",
       }}
-      className="bg-[#ddd] border-t-[2px] flex flex-col justify-center font-black w-full lg:rotate-3 lg:scale-125 overflow-hidden"
+      className="bg-[#111827]  flex flex-col justify-center font-black w-full lg:rotate-3 lg:scale-125 overflow-hidden"
     >
-      <div className="container mx-auto lg:scale-75 xl:gap-10">
+      <div className="container mx-auto lg:scale-75 xl:gap-10 text-white ">
         <div className="lg:-rotate-3 lg:gap-5">
           <div className="flex gap-5 flex-col mx-auto w-1/2">
             <div className="font-thin lg:p-4">
               <form onSubmit={formik.handleSubmit}>
                 {/* Email */}
                 <div>
-                  <label htmlFor="email">Email</label>
+                  <label
+                    htmlFor="email"
+                    style={{ fontFamily: "times" }}
+                    className="pl-2 text-md font-thin"
+                  >
+                    Email
+                  </label>
                   <div>
                     <input
                       id="email"
@@ -47,13 +53,19 @@ export default function ContactForm() {
                       type="email"
                       onChange={formik.handleChange}
                       value={formik.values.email}
-                      className="w-full"
+                      className="w-full bg-[#1f2937] border-0 rounded-lg"
                     />
                   </div>
                 </div>
                 {/* Message */}
                 <div>
-                  <label htmlFor="message">Message</label>
+                  <label
+                    htmlFor="message"
+                    style={{ fontFamily: "times" }}
+                    className="pl-2 text-md font-thin"
+                  >
+                    Message
+                  </label>
                   <div>
                     <textarea
                       id="message"
@@ -61,7 +73,8 @@ export default function ContactForm() {
                       onChange={formik.handleChange}
                       value={formik.values.message}
                       rows={10}
-                      className="w-full"
+                      className="w-full bg-[#1f2937] border-0 rounded-lg"
+                      draggable="false"
                     />
                   </div>
                 </div>

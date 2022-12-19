@@ -3,14 +3,8 @@ import TailwindCssLogo from "./TailwindCssLogo";
 
 export default function Footer() {
   return (
-    <footer
-      style={{
-        backgroundColor: "#111",
-        height: "300px",
-        width: "100%",
-      }}
-    >
-      <div className="container flex flex-col text-stone-600 text-xs mx-auto items-center ">
+    <footer className="flex mx-auto bg-[#111] lg:h-[600px] align-middle pb-[30px]">
+      <div className="container flex flex-col text-stone-600 text-xs mx-auto justify-end">
         <div className="flex flex-col gap-5 w-full" id="contact">
           <div className="flex flex-col gap-1 p-5">
             <div className="justify-left w-full">Carl Wicker</div>
