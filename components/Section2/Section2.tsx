@@ -6,9 +6,9 @@ export default function Section2() {
       style={{
         boxShadow: "20px 25px 45px rgba(0, 0, 0, 0.25)",
       }}
-      className="bg-[#ddd] flex flex-col justify-center font-black w-full  overflow-hidden"
+      className="bg-[#ddd] flex flex-col justify-center font-black w-full"
     >
-      <div className="container flex self-center lg:scale-75 xl:gap-10">
+      <div className="container flex self-center  xl:gap-10">
         <div className="flex flex-col lg:flex-row lg:gap-10 w-full justify-center lg:py-0 lg:my-10 text-white font-thin text-lg">
           {/* UX */}
           <div className="flex gap-5 self-center lg:self-start w-full flex-col p-10 bg-stone-500 lg:w-1/3 hover:bg-blue-500 transition ease-in-out duration-200 lg:hover:scale-110">
@@ -35,7 +35,7 @@ export default function Section2() {
           </div>
 
           {/* UI */}
-          <div className="flex gap-5 self-center lg:self-start flex-col p-10 text-stone-700 h lg:w-1/3 transition ease-in-out duration-200 lg:hover:scale-110">
+          <div className="flex gap-5 self-center lg:self-start flex-col p-10 text-stone-700 h lg:w-1/3">
             <h2
               style={{
                 fontFamily: "Archivo",
@@ -62,7 +62,7 @@ export default function Section2() {
           </div>
 
           {/* DEV */}
-          <div className="flex gap-5 justify-center flex-col p-10 text-stone-900 lg:w-1/3  transition ease-in-out duration-200 lg:hover:scale-110">
+          <div className="flex gap-5 justify-center flex-col p-10 text-stone-900 lg:w-1/3">
             <h2
               style={{
                 fontFamily: "Archivo",

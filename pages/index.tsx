@@ -26,6 +26,7 @@ export default function Home() {
     <div style={{ overflow: "hidden" }}>
       <Section1 />
       <Section2 />
+      <Section3 />
       <Footer />
     </div>
   );
