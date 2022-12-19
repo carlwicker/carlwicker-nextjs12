@@ -35,7 +35,7 @@ export default function Section1() {
   return (
     <section
       id="paralax"
-      className=" flex flex-col w-full bg-auto items-center min-h-screen bg-[url('/img/pic3.webp')] fit bg-center break-all justify-center"
+      className=" flex flex-col w-full bg-auto items-center min-h-screen bg-[url('/img/pic3.webp')] fit bg-center break-all justify-center p-5"
       style={{ fontFamily: "Archivo", fontWeight: 900 }}
     >
       <div className="container pointer-events-none">

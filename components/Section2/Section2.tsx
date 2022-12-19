@@ -9,9 +9,9 @@ export default function Section2() {
       className="bg-[#ddd] flex flex-col justify-center font-black w-full lg:rotate-3 lg:scale-125 overflow-hidden"
     >
       <div className="container flex self-center lg:scale-75 xl:gap-10">
-        <div className="flex flex-col lg:flex-row lg:-rotate-3 gap-10 w-full justify-center lg:py-0 my-10 text-white font-thin">
+        <div className="flex flex-col lg:flex-row lg:-rotate-3 lg:gap-10 w-full justify-center lg:py-0 lg:my-10 text-white font-thin">
           {/* UX */}
-          <div className="flex gap-5 self-center lg:self-start w-full flex-col p-5 bg-stone-700 lg:w-1/3 hover:bg-red-500 transition ease-in-out duration-200 lg:hover:scale-110">
+          <div className="flex gap-5 self-center lg:self-start w-full flex-col p-5 bg-stone-500 lg:w-1/3 hover:bg-red-500 transition ease-in-out duration-200 lg:hover:scale-110">
             <h2
               style={{
                 fontFamily: "Archivo",
@@ -28,8 +28,8 @@ export default function Section2() {
               developer living in Brighton, UK.
             </p>
             <p>
-              My current stack is NodeJS, React & NextJS and TailwindCSS built
-              on Google cloud architecture.
+              My current stack is React, NextJS & TailwindCSS built on Google
+              Cloud Architecture.
             </p>
           </div>
 
