@@ -6,12 +6,12 @@ export default function Section2() {
       style={{
         boxShadow: "20px 25px 45px rgba(0, 0, 0, 0.25)",
       }}
-      className="bg-[#ddd] flex flex-col justify-center font-black w-full lg:rotate-3 lg:scale-125 overflow-hidden"
+      className="bg-[#ddd] flex flex-col justify-center font-black w-full  overflow-hidden"
     >
       <div className="container flex self-center lg:scale-75 xl:gap-10">
-        <div className="flex flex-col lg:flex-row lg:-rotate-3 lg:gap-10 w-full justify-center lg:py-0 lg:my-10 text-white font-thin">
+        <div className="flex flex-col lg:flex-row lg:gap-10 w-full justify-center lg:py-0 lg:my-10 text-white font-thin text-lg">
           {/* UX */}
-          <div className="flex gap-5 self-center lg:self-start w-full flex-col p-5 bg-stone-500 lg:w-1/3 hover:bg-red-500 transition ease-in-out duration-200 lg:hover:scale-110">
+          <div className="flex gap-5 self-center lg:self-start w-full flex-col p-10 bg-stone-500 lg:w-1/3 hover:bg-blue-500 transition ease-in-out duration-200 lg:hover:scale-110">
             <h2
               style={{
                 fontFamily: "Archivo",
@@ -24,17 +24,18 @@ export default function Section2() {
             </h2>
 
             <p>
-              I'm a graphic designer, visual artist, photographer and web
+              I&apos;m a freelance graphic designer, photographer and web
               developer living in Brighton, UK.
             </p>
             <p>
               My current stack is React, NextJS & TailwindCSS built on Google
               Cloud Architecture.
             </p>
+            <p>Currently looking for a full time role.</p>
           </div>
 
           {/* UI */}
-          <div className="flex gap-5 self-center lg:self-start flex-col p-5 bg-stone-700 lg:w-1/3 hover:bg-blue-700 transition ease-in-out duration-200 lg:hover:scale-110">
+          <div className="flex gap-5 self-center lg:self-start flex-col p-10 text-stone-700 h lg:w-1/3 transition ease-in-out duration-200 lg:hover:scale-110">
             <h2
               style={{
                 fontFamily: "Archivo",
@@ -61,7 +62,7 @@ export default function Section2() {
           </div>
 
           {/* DEV */}
-          <div className="flex gap-5 justify-center flex-col p-5 bg-stone-900 lg:w-1/3 hover:bg-green-900 transition ease-in-out duration-200 lg:hover:scale-110">
+          <div className="flex gap-5 justify-center flex-col p-10 text-stone-900 lg:w-1/3  transition ease-in-out duration-200 lg:hover:scale-110">
             <h2
               style={{
                 fontFamily: "Archivo",
