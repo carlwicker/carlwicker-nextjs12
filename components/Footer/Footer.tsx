@@ -13,7 +13,7 @@ export default function Footer() {
           id="contact"
         >
           <div>
-            <div className="justify-left w-full lg:border-l-green-500 lg:border-l-2 lg:pl-20 pl-10">
+            <div className="justify-left w-full lg:border-l-stone-800 lg:border-l-2 lg:pl-20 pl-10">
               Carl Wicker <br />
               10B Bloomsbury Place
               <br />

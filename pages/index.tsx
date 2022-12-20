@@ -20,17 +20,19 @@ import Section1 from "../components/Section1/Section1";
 import Section2 from "../components/Section2/Section2";
 import Section3 from "../components/Section3/Section3";
 import Footer from "../components/Footer/Footer";
+import ContactForm from "../components/ContactForm/ContactForm";
 
 export default function Home() {
   return (
     <div
       style={{
         overflow: "hidden",
-        // transform: "rotate3d(1, 2, 3, 36deg)",
+        // transform: "rotate3d(1, 2, 5, 40deg)",
       }}
     >
       <Section1 />
       <Section2 />
+      <ContactForm />
       <Section3 />
       <Footer />
     </div>

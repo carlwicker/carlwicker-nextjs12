@@ -25,12 +25,12 @@ export default function App({ Component, pageProps }: AppProps) {
         animate="pageAnimate"
         exit="pageExit"
         transition={{
-          duration: 1,
+          duration: 0.33,
         }}
         variants={{
           pageInitial: {
-            opacity: 0,
-            y: "-30vh",
+            opacity: 1,
+            y: "-70vh",
           },
           pageAnimate: {
             opacity: 1,
@@ -39,7 +39,7 @@ export default function App({ Component, pageProps }: AppProps) {
           pageExit: {
             backgroundColor: "green",
             filter: `invert()`,
-            opacity: 0,
+            opacity: 1,
           },
         }}
       >
