@@ -9,9 +9,9 @@ export default function Section2() {
       className="bg-[#ddd] flex flex-col justify-center font-black w-full"
     >
       <div className="container flex self-center  xl:gap-10">
-        <div className="flex flex-col lg:flex-row lg:gap-10 w-full justify-center lg:py-0 lg:my-10 text-white font-thin text-lg">
+        <div className="flex flex-col lg:flex-row xl:gap-10 w-full justify-center lg:py-0 lg:my-10 text-white font-thin text-lg ">
           {/* UX */}
-          <div className="flex gap-5 self-center lg:self-start w-full flex-col p-10 bg-stone-500 lg:w-1/3 hover:bg-blue-500 transition ease-in-out duration-200 lg:hover:scale-110">
+          <div className="flex gap-5 self-center lg:self-start w-full flex-col p-10 bg-stone-500 lg:w-1/3 hover:bg-blue-500 transition ease-in-out duration-200 lg:hover:scale-110 cursor-pointer">
             <h2
               style={{
                 fontFamily: "Archivo",
@@ -23,15 +23,18 @@ export default function Section2() {
               UX
             </h2>
 
-            <p>
-              I&apos;m a freelance graphic designer, photographer and web
-              developer living in Brighton, UK.
+            <p className="leading-1 text-lg">
+              I&apos;m a freelance graphic designer and web developer living in
+              Brighton, UK.
             </p>
-            <p>
-              My current stack is React, NextJS & TailwindCSS built on Google
-              Cloud Architecture.
+            <p className="leading-1 text-lg">
+              I use React / NextJS on a daily basis for clients and my own
+              personal projects. I love CSS, Framer Motion & TailwindCSS!!!! I
+              build on Google Cloud Architecture.
             </p>
-            <p>Currently looking for a full time role.</p>
+            <p className="font-medium">
+              Currently looking for a full time front end developer role.
+            </p>
           </div>
 
           {/* UI */}
@@ -46,18 +49,15 @@ export default function Section2() {
             >
               UI
             </h2>
-            <p>
-              Actually trust fund pok pok unicorn YOLO edison bulb. Ugh art
-              party 8-bit church-key brunch, snackwave cardigan af iPhone. Small
-              batch sustainable flannel plaid gatekeep flexitarian mumblecore
-              artisan. Godard microdosing scenester affogato synth flexitarian,
-              four loko typewriter readymade pinterest actually 3 wolf moon air
-              plant swag.
+            <p className="leading-1 text-3xl lg:text-2xl">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla
+              illo alias voluptate rem aliquam, id doloribus repellat
+              perspiciatis autem corporis ipsa harum unde iusto temporibus,
+              adipisci minus itaque accusantium commodi.
             </p>
-            <p>
-              La croix fashion axe live-edge, typewriter ascot enamel pin
-              snackwave flannel try-hard echo park. Cardigan pitchfork put a
-              bird on it skateboard normcore.
+            <p className="leading-1 text-lg">
+              Illum accusantium eligendi maxime voluptatum temporibus. Ea,
+              doloremque? Possimus eaque voluptas reprehenderit?
             </p>
           </div>
 
@@ -74,13 +74,13 @@ export default function Section2() {
               IO
             </h2>
 
-            <p>
+            <p className="leading-1 text-3xl lg:text-2xl">
               Offal tumblr big mood knausgaard Brooklyn taiyaki iceland
               wayfarers schlitz readymade artisan. Pour-over brunch cold-pressed
               fanny pack cloud bread snackwave. Jean shorts same green juice
               pour-over sartorial tumeric.
             </p>
-            <p>
+            <p className="leading-1 text-lg">
               8-bit kale chips green juice roof party. Artisan irony retro swag.
               Swag ennui messenger bag JOMO, fam tousled offal pork belly woke
               bitters brunch cliche pour-over art party. Deep v you probably

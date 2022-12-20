@@ -23,7 +23,12 @@ import Footer from "../components/Footer/Footer";
 
 export default function Home() {
   return (
-    <div style={{ overflow: "hidden" }}>
+    <div
+      style={{
+        overflow: "hidden",
+        // transform: "rotate3d(1, 2, 3, 36deg)",
+      }}
+    >
       <Section1 />
       <Section2 />
       <Section3 />

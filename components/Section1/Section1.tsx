@@ -35,28 +35,20 @@ export default function Section1() {
   return (
     <section
       id="paralax"
-      className=" flex flex-col w-full bg-cover items-center min-h-screen bg-[url('/img/pic3.webp')] fit bg-center break-all justify-center p-5 "
-      style={{ fontFamily: "Archivo", fontWeight: 900 }}
+      className="flex flex-col w-full bg-cover items-center min-h-screen bg-[url('/img/pic3.webp')] fit bg-center break-all justify-center p-5 "
+      style={{
+        fontFamily: "Archivo",
+        fontWeight: 900,
+      }}
     >
-      <div className="container pointer-events-none">
-        {/* <h1
-          className="uppercase font-black flex text-center text-white tracking-tighter drop-shadow-md justify-center mx-auto break-words md:text-[200px] text-[200px] "
-          style={{ lineHeight: "0.7" }}
-        >
-          <div className="flex flex-col md:flex-row w-full gap-5 justify-center">
-            <div>UX</div>
-            <div>UI</div>
-            <div>IO</div>
-          </div>
-        </h1> */}
-
-        <p className="text-white drop-shadow-lg tracking-[-0.06em] lg:-rotate-6 text-6xl bg-red-400 box-border p-0 m-0 uppercase mix-blend-multiply">
+      <div className="container">
+        <h1 className="text-white drop-shadow-lg tracking-[-0.06em] xl:text-7xl lg:-rotate-6 text-6xl bg-red-400 box-border p-0 m-0 uppercase mix-blend-multiply hover:bg-blue-400 cursor-pointer">
           Adobe Creative / Figma <br />
           ReactJS / NextJS / JavaScript
           <br />
-          CSS / TailwindCSS <br />
+          CSS / TailwindCSS / Framer Motion <br />
           Google Cloud Architechure
-        </p>
+        </h1>
       </div>
     </section>
   );

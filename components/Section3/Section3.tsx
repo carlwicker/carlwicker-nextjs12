@@ -1,27 +1,41 @@
 export default function Section3() {
   return (
     <section
-      className="bg-[url('/img/pic2.webp')] bg-cover min-h-screen bg-fixed w-full flex justify-center align-middle"
+      className=" bg-[url('/img/pic2.webp')] bg-cover min-h-screen bg-fixed w-full flex justify-center align-middle"
       style={{}}
     >
-      <h1
-        className="text-white font-black self-center hover:scale-150 transition duration-200 ease-in cursor-pointer"
-        style={{
-          fontFamily: "Archivo",
-          fontSize: "140px",
-          fontWeight: "900",
-          boxSizing: "border-box",
-          margin: "0",
-          padding: "0",
-          letterSpacing: "-0.1em",
-          lineHeight: "0.7em",
-          textAlign: "center",
-        }}
-      >
-        GIVE <br />
-        ME A <br />
-        JOB!
-      </h1>
+      <div className="container flex">
+        <div
+          className="flex xl:w-1/3 py-20 text-stone-700 text-5xl leading-[0.8em] font-bold lg:w-auto px-10 flex-col gap-5 self-center  "
+          style={{
+            fontFamily: "Archivo",
+          }}
+        >
+          <h2 className="uppercase text-5xl leading-[0.8em] font-semibold bg-white shadow-lg w-fit  p-5">
+            Brighton <br /> Marina
+          </h2>
+
+          <div className="font-thin lg:leading-1 text-lg bg-white shadow-lg w-fit  p-5">
+            <p className="lg:text-3xl mix-blend-normal ">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+              nesciunt, autem doloribus.
+            </p>
+            <br />
+            <p>
+              Quos dignissimos excepturi voluptatum, voluptates ea ipsum
+              officia. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Cumque assumenda, recusandae itaque odio provident magni officia
+              nemo repellendus, quam eligendi beatae a ipsa quibusdam harum
+              suscipit corporis cum aliquam.
+            </p>
+          </div>
+        </div>
+        <div className="flex w-1/3 xl:w-2/3 justify-end py-20">
+          <div className="text-white font-thin text-xs self-end hidden xl:flex">
+            Copyright Control Carl Wicker 2019 / 50.80749677 -0.101832926
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
