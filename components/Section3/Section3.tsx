@@ -3,7 +3,7 @@ export default function Section3() {
     <section className=" bg-[url('/img/pic2.webp')] bg-cover min-h-screen bg-fixed w-full flex justify-center align-middle">
       <div className="container flex">
         <div
-          className="flex xl:w-1/3 py-20 text-stone-700 text-5xl leading-[0.8em] font-bold lg:w-auto px-10 flex-col gap-5 self-center  "
+          className="flex xl:w-1/3 py-20 text-stone-700 text-5xl leading-[0.8em] font-bold lg:w-auto flex-col gap-5 self-center  "
           style={{
             fontFamily: "Archivo",
           }}
