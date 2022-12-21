@@ -4,11 +4,12 @@ import type { AppProps } from "next/app";
 import { useState } from "react";
 import Head from "next/head";
 import MobileMenu from "../components/Navbar/MobileMenu";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isOpen, setIsOpen] = useState(false);
+
   const router = useRouter();
 
   return (
@@ -25,21 +26,20 @@ export default function App({ Component, pageProps }: AppProps) {
         animate="pageAnimate"
         exit="pageExit"
         transition={{
-          duration: 0.33,
+          duration: 0,
         }}
         variants={{
           pageInitial: {
             opacity: 1,
-            y: "-70vh",
+            x: "100vw",
           },
           pageAnimate: {
             opacity: 1,
-            y: 0,
+            x: "0",
           },
           pageExit: {
-            backgroundColor: "green",
-            filter: `invert()`,
-            opacity: 1,
+            opacity: 0,
+            x: "100vw",
           },
         }}
       >

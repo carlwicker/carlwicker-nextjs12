@@ -1,6 +1,16 @@
 // IMPROVE ROTATION CSS, SHOULD COUNTER ROTATE DIV CONTAINING ELEMENTS
 
+import { useRef, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+
 export default function Section2() {
+  const { ref, inView, entry } = useInView({ threshold: 1 });
+
+  useEffect(() => {
+    console.log("Element is in view: ", inView);
+  }, [inView]);
+
   return (
     <section
       style={{
@@ -9,9 +19,16 @@ export default function Section2() {
       className="bg-[#ddd] flex flex-col justify-center w-full py-20"
     >
       <div className="container flex self-center xl:gap-10 p-5">
-        <div className="flex flex-col lg:flex-row xl:gap-20 w-full justify-center lg:py-0 lg:my-10 text-white text-lg gap-10">
+        <div
+          className={`flex flex-col lg:flex-row xl:gap-20 w-full justify-center lg:py-0 lg:my-10 text-white text-lg gap-10`}
+        >
           {/* UX */}
-          <div className="flex gap-5 self-center lg:self-start flex-col font-lg font-normal text-stone-500 h lg:w-1/3">
+          <motion.div
+            ref={ref}
+            className={`flex gap-5 self-center lg:self-start flex-col font-lg font-normal lg:w-1/3 transition duration-200 ${
+              inView ? "text-blue-500" : "text-stone-500"
+            }`}
+          >
             <h2
               style={{
                 fontFamily: "Archivo",
@@ -33,7 +50,7 @@ export default function Section2() {
             <p className="font-medium">
               Currently looking for a full time front end developer role.
             </p>
-          </div>
+          </motion.div>
 
           {/* UI */}
           <div className="flex gap-5 self-center lg:self-start flex-col font-normal text-stone-700 h lg:w-1/3 text-lg">
