@@ -25,7 +25,7 @@ export default function Section2() {
           {/* UX */}
           <motion.div
             ref={ref}
-            className={`flex gap-5 self-center lg:self-start flex-col font-lg font-normal lg:w-1/3 transition ease-in duration-500 ${
+            className={`flex gap-5 self-center lg:self-start flex-col font-lg font-normal lg:w-1/3 transition ease-in duration-200 ${
               inView ? "text-blue-500" : "text-stone-500"
             }`}
           >

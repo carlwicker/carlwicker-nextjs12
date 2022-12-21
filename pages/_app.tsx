@@ -26,20 +26,20 @@ export default function App({ Component, pageProps }: AppProps) {
         animate="pageAnimate"
         exit="pageExit"
         transition={{
-          duration: 2,
+          duration: 0.5,
         }}
         variants={{
           pageInitial: {
             opacity: 1,
-            x: "100vw",
+            y: "-20vh",
           },
           pageAnimate: {
             opacity: 1,
-            x: "0",
+            y: "0",
           },
           pageExit: {
             opacity: 0,
-            x: "100vw",
+            y: "-20vh",
           },
         }}
       >

@@ -33,7 +33,7 @@ export default function Footer() {
               <br /> Email:{" "}
               <a
                 href="mailto:carlwicker@gmail.com"
-                className="hover:text-green-300 duration-200 ease-in transition"
+                className="hover:text-blue-400 duration-200 ease-in transition"
               >
                 carlwicker@gmail.com
               </a>
@@ -43,7 +43,7 @@ export default function Footer() {
               Web:{" "}
               <a
                 href="http://carlwicker.co.uk"
-                className="hover:text-green-300 duration-200 ease-in transition"
+                className="hover:text-blue-400 duration-200 ease-in transition"
               >
                 http://carlwicker.co.uk
               </a>

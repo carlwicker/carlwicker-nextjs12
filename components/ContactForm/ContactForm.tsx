@@ -79,15 +79,11 @@ export default function ContactForm({ props }: any) {
           </p>
         </div>
         <div className="flex flex-col xl:w-1/3 lg:w-1/2 mt-5 font-thin gap-10">
-          <motion.p
-            ref={ref}
-            className={`${
-              inView ? "text-blue-700" : "text-stone-700"
-            } font-normal transition ease-in duration-300`}
-          >
+          <p>
             Please feel free to contact me with any queries regarding my
-            design/development work.
-          </motion.p>
+            design/development work. I'm currently looking for a creative
+            developer role in a Brighton agency.
+          </p>
           <div className="font-thin  w-full">
             <form
               onSubmit={formik.handleSubmit}
@@ -104,7 +100,7 @@ export default function ContactForm({ props }: any) {
                   type="email"
                   onChange={formik.handleChange}
                   value={formik.values.email}
-                  className="border-0 w-full bg-[#ccc] text-stone-700"
+                  className={`w-full bg-[#ccc]  text-stone-700`}
                 />
               </div>
               {/* Message */}
@@ -119,18 +115,19 @@ export default function ContactForm({ props }: any) {
                   onChange={formik.handleChange}
                   value={formik.values.message}
                   rows={10}
-                  className="w-full bg-[#ccc] border-0 text-stone-700"
+                  className={`w-full bg-[#ccc]  text-stone-700 `}
                   draggable="false"
                 />
               </div>
-              <button
+              <motion.button
                 type="submit"
-                className={`p-3 font-semibold bg-stone-700 hover:bg-stone-500 text-white rounded-md transition-all ease-in duration-300 ${
-                  inView ? "bg-blue-700" : "text-stone-700"
+                ref={ref}
+                className={`p-3 font-semibold hover:bg-stone-500  text-white rounded-md transition-all ease-in duration-300 ${
+                  inView ? "bg-blue-400" : "bg-stone-700"
                 }`}
               >
                 Email Me!
-              </button>
+              </motion.button>
             </form>
           </div>
           <p className="text-sm">
