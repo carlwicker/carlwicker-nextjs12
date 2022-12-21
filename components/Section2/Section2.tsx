@@ -25,7 +25,7 @@ export default function Section2() {
           {/* UX */}
           <motion.div
             ref={ref}
-            className={`flex gap-5 self-center lg:self-start flex-col font-lg font-normal lg:w-1/3 transition duration-200 ${
+            className={`flex gap-5 self-center lg:self-start flex-col font-lg font-normal lg:w-1/3 transition ease-in duration-500 ${
               inView ? "text-blue-500" : "text-stone-500"
             }`}
           >
@@ -43,8 +43,8 @@ export default function Section2() {
               Brighton, UK.
             </p>
             <p>
-              I use React / NextJS on a daily basis for clients and my own
-              personal projects. I love CSS, Framer Motion & TailwindCSS!!!! I
+              I like to build beautiful web sites with clean functional code. I
+              have a passion for typography, CSS, TailwindCSS & Framer Motion. I
               build on Google Cloud Architecture.
             </p>
             <p className="font-medium">
@@ -53,7 +53,7 @@ export default function Section2() {
           </motion.div>
 
           {/* UI */}
-          <div className="flex gap-5 self-center lg:self-start flex-col font-normal text-stone-700 h lg:w-1/3 text-lg">
+          <div className="flex gap-5 self-center lg:self-start flex-col font-normal text-stone-700 h lg:w-1/3">
             <h2
               style={{
                 fontFamily: "Archivo",

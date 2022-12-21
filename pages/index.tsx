@@ -27,7 +27,7 @@ export default function Home() {
     <div
       style={{
         overflow: "hidden",
-        // transform: "rotate3d(1, 2, 5, 40deg)",
+        // transform: "rotate3d(1, 2, 5, 20deg)",
       }}
     >
       <Section1 />

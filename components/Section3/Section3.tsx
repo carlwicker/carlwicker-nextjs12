@@ -8,7 +8,7 @@ export default function Section3() {
             fontFamily: "Archivo",
           }}
         >
-          <h2 className="uppercase text-5xl leading-[0.8em] font-semibold bg-white w-fit  p-5">
+          <h2 className="uppercase text-5xl leading-[0.8em] font-normal bg-white w-fit  p-5">
             Brighton <br /> Marina
           </h2>
 

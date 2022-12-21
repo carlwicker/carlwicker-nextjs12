@@ -1,7 +1,16 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
-export default function ContactForm() {
+export default function ContactForm({ props }: any) {
+  const { ref, inView, entry } = useInView({ threshold: 1 });
+
+  useEffect(() => {
+    console.log("Element is in view: ", inView);
+  }, [inView]);
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -35,7 +44,7 @@ export default function ContactForm() {
       <div className="container flex mx-auto py-20 lg:gap-20 md:gap-20 px-5 text-lg flex-col lg:flex-row gap-0">
         <div className="xl:w-1/3 xl:flex hidden"></div>
         <div className="flex flex-col xl:w-1/3 lg:w-1/2 mt-5 min-h-fit font-thin gap-10">
-          <h2 className="text-3xl">
+          <h2 className="text-2xl">
             Aliquid sapiente fugit ab maxime minus quos. Ipsa cupiditate
             asperiores mollitia fuga?
           </h2>
@@ -70,12 +79,15 @@ export default function ContactForm() {
           </p>
         </div>
         <div className="flex flex-col xl:w-1/3 lg:w-1/2 mt-5 font-thin gap-10">
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-            possimus molestiae suscipit enim qui recusandae cupiditate
-            praesentium quaerat porro quae veniam doloremque a numquam, quas
-            aliquid officiis nobis ipsum doloribus.
-          </p>
+          <motion.p
+            ref={ref}
+            className={`${
+              inView ? "text-blue-700" : "text-stone-700"
+            } font-normal transition ease-in duration-300`}
+          >
+            Please feel free to contact me with any queries regarding my
+            design/development work.
+          </motion.p>
           <div className="font-thin  w-full">
             <form
               onSubmit={formik.handleSubmit}
@@ -113,9 +125,11 @@ export default function ContactForm() {
               </div>
               <button
                 type="submit"
-                className="p-3 font-semibold bg-stone-700 hover:bg-stone-500 text-white rounded-md transition-all ease-in duration-300"
+                className={`p-3 font-semibold bg-stone-700 hover:bg-stone-500 text-white rounded-md transition-all ease-in duration-300 ${
+                  inView ? "bg-blue-700" : "text-stone-700"
+                }`}
               >
-                Submit
+                Email Me!
               </button>
             </form>
           </div>
@@ -133,4 +147,14 @@ export default function ContactForm() {
       </div>
     </section>
   );
+}
+
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(`https://.../data`);
+  const data = "12344";
+  // await res.json();
+
+  // Pass data to the page via props
+  return { props: { data } };
 }
