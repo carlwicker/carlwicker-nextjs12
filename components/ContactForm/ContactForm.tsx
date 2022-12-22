@@ -81,7 +81,7 @@ export default function ContactForm({ props }: any) {
         <div className="flex flex-col xl:w-1/3 lg:w-1/2 mt-5 font-thin gap-10">
           <p>
             Please feel free to contact me with any queries regarding my
-            design/development work. I'm currently looking for a creative
+            design/development work. I&lsquo;m currently looking for a creative
             developer role in a Brighton agency.
           </p>
           <div className="font-thin  w-full">
