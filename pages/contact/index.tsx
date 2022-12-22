@@ -7,7 +7,6 @@ export default function ContactPage() {
   return (
     <div>
       <Top />
-      <ArticlePage />
       <ContactForm />
       <Footer />
     </div>

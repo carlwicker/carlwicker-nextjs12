@@ -4,20 +4,21 @@ import articlePic from "../../public/img/trees.webp";
 
 export default function ArticlePage() {
   return (
-    <section className="min-h-screen bg-stone-200 py-40">
+    <section className="min-h-screen bg-stone-200 md:py-20 py-0">
       <div className="container flex mx-auto flex-col lg:flex-row text-lg">
         <Image
           src={articlePic}
           alt="trees"
           className="w-full lg:w-1/2 lg:h-1/3"
         ></Image>
-        <div className="2xl:w-1/3 xl:w-1/3 lg:px-10 lg:py-0 md:px-0 py-10  flex-col gap-10 flex text-stone-800">
+        <div className="2xl:w-1/3 xl:w-1/3 lg:px-10 lg:py-0 md:px-0 py-10  p-5  flex-col gap-10 flex text-stone-800">
           <p className="text-sm text-stone-400">
             Written by{" "}
             <a
               href="https://openai.com/"
-              target={"_blank"}
+              target="_blank"
               className="text-green-900 hover:text-green-600"
+              rel="noreferrer"
             >
               OpenAI ChatGPT
             </a>
@@ -28,7 +29,7 @@ export default function ArticlePage() {
             All rights reserved.
           </p>
           <h1 className="text-6xl font-thin ">
-            The Seed's Journey: <br /> A Forest Tale
+            The Seed&apos;s Journey: <br /> A Forest Tale
           </h1>
 
           <p>

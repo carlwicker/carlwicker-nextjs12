@@ -1,11 +1,11 @@
 export default function Section3() {
   return (
-    <section className=" bg-[url('/img/pic2.webp')] bg-cover min-h-screen bg-fixed w-full flex justify-center align-middle">
+    <section className=" bg-[url('/img/pic2.webp')] bg-cover h-[390px] bg-fixed w-full flex justify-center align-middle">
       <div className="container flex">
         <div
-          className="flex xl:w-1/3 py-20 text-stone-700 text-5xl leading-[0.8em] font-bold lg:w-auto flex-col gap-5 self-center  "
+          className="flex xl:w-1/3 py-20 text-stone-700 text-5xl leading-[0.8em] font-bold lg:w-auto flex-col gap-5 self-center hidden "
           style={{
-            fontFamily: "Archivo",
+            fontFamily: "Times",
           }}
         >
           <h2 className="uppercase text-5xl leading-[0.8em] font-normal bg-white w-fit  p-5">
