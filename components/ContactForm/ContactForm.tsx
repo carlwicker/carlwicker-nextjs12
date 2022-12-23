@@ -1,11 +1,12 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
 export default function ContactForm({ props }: any) {
   const { ref, inView, entry } = useInView({ threshold: 1 });
+  const [showEmail, setShowEmail] = useState<Boolean>(true);
 
   useEffect(() => {
     console.log("Element is in view: ", inView);
@@ -24,11 +25,14 @@ export default function ContactForm({ props }: any) {
     }),
     onSubmit: (values, actions) => {
       (async () => {
+        console.log(values);
         const response = await fetch("/api/sendmail", {
           method: "POST",
           body: JSON.stringify(values),
         });
       })();
+
+      setShowEmail(false);
 
       actions.setSubmitting(false);
     },
@@ -87,7 +91,9 @@ export default function ContactForm({ props }: any) {
           <div className="font-thin  w-full">
             <form
               onSubmit={formik.handleSubmit}
-              className="flex flex-col gap-5"
+              className={`flex flex-col gap-5 ${
+                showEmail ? "opacity-1" : "opacity-25"
+              }`}
             >
               {/* Email */}
               <div>
@@ -100,7 +106,8 @@ export default function ContactForm({ props }: any) {
                   type="email"
                   onChange={formik.handleChange}
                   value={formik.values.email}
-                  className={`w-full bg-[#ccc]  text-stone-700`}
+                  className={`w-full bg-[#ccc]  text-stone-700 `}
+                  disabled={!showEmail}
                 />
               </div>
               {/* Message */}
@@ -117,16 +124,20 @@ export default function ContactForm({ props }: any) {
                   rows={10}
                   className={`w-full bg-[#ccc]  text-stone-700 `}
                   draggable="false"
+                  disabled={!showEmail}
                 />
               </div>
               <motion.button
                 type="submit"
                 ref={ref}
-                className={`p-3 font-semibold hover:bg-stone-500  text-white rounded-md transition-all ease-in duration-300 ${
-                  inView ? "bg-blue-400" : "bg-stone-700"
+                className={`p-3 font-semibold ${
+                  showEmail && "hover:bg-stone-500"
+                }  text-white rounded-md transition-all ease-in duration-300 ${
+                  inView && showEmail ? "bg-blue-400" : "bg-stone-700"
                 }`}
+                disabled={!showEmail}
               >
-                Email Me!
+                {showEmail ? "Email Me!" : "Message Sent!"}
               </motion.button>
             </form>
           </div>

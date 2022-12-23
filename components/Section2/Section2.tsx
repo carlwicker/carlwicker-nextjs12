@@ -43,9 +43,10 @@ export default function Section2() {
               Brighton, UK.
             </p>
             <p>
-              I like to build beautiful web sites with clean functional code. I
-              have a passion for typography, CSS, TailwindCSS & Framer Motion. I
-              build on Google Cloud Architecture.
+              I build beautiful web sites with clean functional code. I have a
+              passion for layout, typography, CSS, TailwindCSS, Framer Motion
+              and all things front end. I currently build using ReactJS/NextJS &
+              TailwindCSS on Google Cloud Architecture.
             </p>
             <p className="font-medium">
               Currently looking for a full time front end developer role.

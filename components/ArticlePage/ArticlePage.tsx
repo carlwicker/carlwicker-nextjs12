@@ -1,10 +1,9 @@
 import Image from "next/image";
-import { object } from "yup";
 import articlePic from "../../public/img/trees.webp";
 
 export default function ArticlePage() {
   return (
-    <section className="min-h-screen bg-stone-200 md:py-20 py-0">
+    <section className="min-h-screen bg-stone-200 md:pt-20 py-0 pb-40">
       <div className="container flex mx-auto flex-col lg:flex-row text-lg">
         <Image
           src={articlePic}
@@ -12,8 +11,8 @@ export default function ArticlePage() {
           className="w-full lg:w-1/2 lg:h-1/3"
         ></Image>
         <div className="2xl:w-1/3 xl:w-1/3 lg:px-10 lg:py-0 md:px-0 py-10  p-5  flex-col gap-10 flex text-stone-800">
-          <p className="text-sm text-stone-400">
-            Written by{" "}
+          <p className="text-sm text-thin text-stone-400">
+            Created with{" "}
             <a
               href="https://openai.com/"
               target="_blank"
@@ -22,9 +21,9 @@ export default function ArticlePage() {
             >
               OpenAI ChatGPT
             </a>
-            . 22.12.22 14:30
+            .
             <br />
-            Responsive TailwindCSS Typographical Experiment.
+            Responsive TailwindCSS Typographical Article Element.
             <br />
             All rights reserved.
           </p>
