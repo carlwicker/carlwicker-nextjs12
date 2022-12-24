@@ -2,7 +2,7 @@ export default function BoldArticlePage() {
   return (
     <section className="min-h-screen bg-pink-300 text-black text-md font-thin overflow-hidden flex bg-gradient-to-r from-indigo-500 lg:p-0">
       <div
-        className="container flex lg:flex-row flex-col mx-auto md:py-40 py-20 gap-20"
+        className="container flex lg:flex-row flex-col mx-auto md:py-40 px-5 md:px-0 py-20 gap-20"
         style={
           {
             // transform: "rotate3d(0.95, 0.5, 0.2, 50deg)",

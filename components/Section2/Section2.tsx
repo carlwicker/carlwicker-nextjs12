@@ -16,7 +16,7 @@ export default function Section2() {
       style={{
         boxShadow: "20px 25px 45px rgba(0, 0, 0, 0.25)",
       }}
-      className="bg-[#ddd] flex flex-col justify-center w-full py-20"
+      className="bg-[#ddd] flex flex-col justify-center w-full py-20 px-5 md:px-0"
     >
       <div className="container flex self-center xl:gap-10">
         <div

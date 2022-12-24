@@ -1,0 +1,36 @@
+[debug] [2022-12-24T03:13:46.951Z] ----------------------------------------------------------------------
+[debug] [2022-12-24T03:13:46.952Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-12-24T03:13:46.953Z] CLI Version:   11.19.0
+[debug] [2022-12-24T03:13:46.953Z] Platform:      win32
+[debug] [2022-12-24T03:13:46.953Z] Node Version:  v16.15.1
+[debug] [2022-12-24T03:13:46.954Z] Time:          Sat Dec 24 2022 03:13:46 GMT+0000 (Greenwich Mean Time)
+[debug] [2022-12-24T03:13:46.954Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-24T03:13:47.014Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-24T03:13:47.014Z] > authorizing via signed-in user (carlwicker@gmail.com)
+[debug] [2022-12-24T03:13:47.014Z] [iam] checking project carlwicker-nextjs12 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-12-24T03:13:47.015Z] > refreshing access token with scopes: []
+[debug] [2022-12-24T03:13:47.017Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-12-24T03:13:47.017Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-24T03:13:47.155Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-12-24T03:13:47.155Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-24T03:13:47.160Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/carlwicker-nextjs12:testIamPermissions [none]
+[debug] [2022-12-24T03:13:47.160Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/carlwicker-nextjs12:testIamPermissions x-goog-quota-user=projects/carlwicker-nextjs12
+[debug] [2022-12-24T03:13:47.160Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/carlwicker-nextjs12:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-24T03:13:47.824Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/carlwicker-nextjs12:testIamPermissions 200
+[debug] [2022-12-24T03:13:47.824Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/carlwicker-nextjs12:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-24T03:13:47.824Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/carlwicker-nextjs12 [none]
+[debug] [2022-12-24T03:13:48.233Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/carlwicker-nextjs12 200
+[debug] [2022-12-24T03:13:48.234Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/carlwicker-nextjs12 {"projectId":"carlwicker-nextjs12","projectNumber":"54906668271","displayName":"carlwicker-nextjs12","name":"projects/carlwicker-nextjs12","resources":{"hostingSite":"carlwicker-nextjs12"},"state":"ACTIVE","etag":"1_2aef7aa3-1edd-49ab-b1be-26d851db0513"}
+[debug] [2022-12-24T03:13:51.065Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/carlwicker-nextjs12/sites pageToken=&pageSize=10
+[debug] [2022-12-24T03:13:51.947Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/carlwicker-nextjs12/sites 200
+[debug] [2022-12-24T03:13:51.948Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/carlwicker-nextjs12/sites {"sites":[{"name":"projects/carlwicker-nextjs12/sites/carlwicker-nextjs12","defaultUrl":"https://carlwicker-nextjs12.web.app","appId":"1:54906668271:web:e5a0ecf6153405d1b1871a","type":"DEFAULT_SITE"}]}
+[debug] [2022-12-24T03:13:51.948Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:54906668271:web:e5a0ecf6153405d1b1871a/config [none]
+[debug] [2022-12-24T03:13:52.831Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:54906668271:web:e5a0ecf6153405d1b1871a/config 200
+[debug] [2022-12-24T03:13:52.831Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:54906668271:web:e5a0ecf6153405d1b1871a/config {"projectId":"carlwicker-nextjs12","appId":"1:54906668271:web:e5a0ecf6153405d1b1871a","storageBucket":"carlwicker-nextjs12.appspot.com","apiKey":"AIzaSyC-9F5ADsRl1ehqvlp5yaGDG0T8K69VqOA","authDomain":"carlwicker-nextjs12.firebaseapp.com","messagingSenderId":"54906668271","measurementId":"G-TTG1J9MZG4"}
+[debug] [2022-12-24T03:14:09.381Z] TypeError: Cannot read properties of null (reading 'toString')
+    at ɵcodegenFunctionsDirectory (C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\next\index.js:220:18)
+    at async prepareFrameworks (C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:305:84)
+    at async deploy (C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.

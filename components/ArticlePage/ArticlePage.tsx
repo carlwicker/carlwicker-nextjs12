@@ -8,7 +8,7 @@ export default function ArticlePage() {
         <div className="w-full lg:w-1/2 lg:h-1/3">
           <Image src={articlePic} alt="trees"></Image>
         </div>
-        <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/2 lg:py-0 md:px-0 py-10  p-5  flex-col gap-10 flex text-stone-800">
+        <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/2 lg:py-0  py-10  p-5 md:px-0 flex-col gap-10 flex text-stone-800">
           <p className="text-sm text-thin text-stone-400">
             Created with{" "}
             <a
