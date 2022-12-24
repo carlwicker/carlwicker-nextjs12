@@ -1,16 +1,12 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
-export default function ContactForm({ props }: any) {
+export default function ContactForm() {
   const { ref, inView, entry } = useInView({ threshold: 1 });
   const [showEmail, setShowEmail] = useState<Boolean>(true);
-
-  useEffect(() => {
-    console.log("Element is in view: ", inView);
-  }, [inView]);
 
   const formik = useFormik({
     initialValues: {
@@ -156,7 +152,6 @@ export default function ContactForm({ props }: any) {
     </section>
   );
 }
-
 export async function getServerSideProps() {
   // Fetch data from external API
   const res = await fetch(`https://.../data`);

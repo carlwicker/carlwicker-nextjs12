@@ -4,7 +4,7 @@ import type { AppProps } from "next/app";
 import { useState } from "react";
 import Head from "next/head";
 import MobileMenu from "../components/Navbar/MobileMenu";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }: AppProps) {

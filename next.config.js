@@ -12,6 +12,7 @@ const nextConfig = {
     storageBucket: process.env.storageBucket,
     messagingSenderId: process.env.messagingSenderId,
     appId: process.env.appId,
+    measurementId: process.env.measurementId,
     SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
   },
 };
