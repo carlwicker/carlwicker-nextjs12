@@ -18,7 +18,7 @@ export default function Section2() {
       }}
       className="bg-[#ddd] flex flex-col justify-center w-full py-20"
     >
-      <div className="container flex self-center xl:gap-10 p-5">
+      <div className="container flex self-center xl:gap-10">
         <div
           className={`flex flex-col lg:flex-row xl:gap-20 w-full justify-center lg:py-0 lg:my-10 text-white text-lg gap-10`}
         >

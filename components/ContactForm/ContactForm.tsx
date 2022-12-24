@@ -45,7 +45,7 @@ export default function ContactForm({ props }: any) {
         backgroundColor: "rgb(168 162 158)",
       }}
     >
-      <div className="container flex mx-auto py-20 lg:gap-20 md:gap-20 px-5 text-lg flex-col lg:flex-row gap-0">
+      <div className="container flex mx-auto py-20 lg:gap-20 md:gap-20 text-lg flex-col lg:flex-row gap-0">
         <div className="xl:w-1/3 xl:flex hidden"></div>
         <div className="flex flex-col xl:w-1/3 lg:w-1/2 mt-5 min-h-fit font-thin gap-10">
           <h2 className="text-2xl">
