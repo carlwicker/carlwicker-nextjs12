@@ -49,7 +49,8 @@ export default function Section2() {
               TailwindCSS on Google Cloud Architecture.
             </p>
             <p className="font-medium">
-              Currently looking for a full time front end developer role.
+              Currently looking for a full time Creative / Front End Developer
+              role in a Brighton Agency.
             </p>
           </motion.div>
 

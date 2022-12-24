@@ -152,12 +152,3 @@ export default function ContactForm() {
     </section>
   );
 }
-export async function getServerSideProps() {
-  // Fetch data from external API
-  const res = await fetch(`https://.../data`);
-  const data = "12344";
-  // await res.json();
-
-  // Pass data to the page via props
-  return { props: { data } };
-}
