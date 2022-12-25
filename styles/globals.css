@@ -71,3 +71,14 @@ h1 {
   body {
   }
 }
+
+svg path {
+  transition: 2s ease-in;
+}
+
+svg:hover path {
+  transition: 2s ease-in;
+  d: path(
+    "m.53.5h1920s-.5,366.79,0,585.65-307.5-389.15-557.5-389.15S674.03,473,492.03,507,.03,342.94.53,176.47.53.5.53.5Z"
+  );
+}

@@ -10,7 +10,7 @@ export default function BoldArticlePage() {
   ];
 
   const container = {
-    hidden: { opacity: 0, y: 10 },
+    hidden: { opacity: 0 },
     show: {
       opacity: 1,
       transition: {
@@ -29,15 +29,28 @@ export default function BoldArticlePage() {
 
   return (
     <section className="min-h-screen bg-pink-300 text-black text-xl font-thin overflow-hidden flex bg-gradient-to-r from-indigo-500 lg:p-0">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 800 800"
+        className="absolute z-0 border-0"
+        opacity={0.25}
+        fill="pink"
+      >
+        <path
+          className="cls-1"
+          d="m.53.5h1920s-.5,366.79,0,585.65-544.5-207.15-557.5-389.15-832,855-957,465S.03,342.94.53,176.47.53.5.53.5Z"
+        ></path>
+      </svg>
+
       <div className="container flex lg:flex-row flex-col mx-auto md:py-40 px-5 md:px-0 py-20 gap-20">
-        <div className="xl:w-1/3 justify-end flex text-right lg:w-1/2">
+        <div className="xl:w-1/3 justify-end flex text-right lg:w-1/2 z-10">
           <div className=" flex gap-20 text-xs">
-            <p className="text-thin text-black">
+            <p className="text-thin text-white">
               Content created with{" "}
               <a
                 href="https://openai.com"
                 target="_blank"
-                className="text-black hover:text-stone-200"
+                className="text-white hover:text-stone-200"
                 rel="noreferrer"
               >
                 OpenAI ChatGPT

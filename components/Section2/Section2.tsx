@@ -1,11 +1,8 @@
 // IMPROVE ROTATION CSS, SHOULD COUNTER ROTATE DIV CONTAINING ELEMENTS
 
-import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
 export default function Section2() {
-  const { ref, inView, entry } = useInView({ threshold: 1 });
-
   return (
     <section
       style={{
@@ -19,10 +16,10 @@ export default function Section2() {
         >
           {/* UX */}
           <motion.div
-            ref={ref}
-            className={`flex gap-5 self-center lg:self-start flex-col font-lg font-normal lg:w-1/3 transition ease-in duration-200 ${
-              inView ? "text-blue-500" : "text-stone-500"
-            }`}
+            whileInView={{ color: "#60a5fa" }}
+            transition={{ duration: 0.25, delay: 0.25 }}
+            exit={{ color: "#78716c" }}
+            className={`flex gap-5 self-center lg:self-start flex-col font-lg font-normal text-stone-500 lg:w-1/3`}
           >
             <h2
               style={{
