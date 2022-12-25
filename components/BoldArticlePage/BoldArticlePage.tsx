@@ -28,64 +28,69 @@ export default function BoldArticlePage() {
   };
 
   return (
-    <section className="min-h-screen bg-pink-300 text-black text-xl font-thin overflow-hidden flex bg-gradient-to-r from-indigo-500 lg:p-0">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 800 800"
-        className="absolute z-0 border-0"
-        opacity={0.25}
-        fill="pink"
-      >
-        <path
-          className="cls-1"
-          d="m.53.5h1920s-.5,366.79,0,585.65-544.5-207.15-557.5-389.15-832,855-957,465S.03,342.94.53,176.47.53.5.53.5Z"
-        ></path>
-      </svg>
+    <div className="relative overflow-hidden p-0 m-0">
+      <section className="min-h-screen bg-pink-300 text-black text-xl font-thin overflow-hidden	 flex bg-gradient-to-r from-indigo-500 lg:p-0">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 800 800"
+          className="absolute overflow-hidden lg:-mt-[200px]"
+          opacity={0.1}
+          fill="pink"
+          style={{ overflow: "hidden" }}
+        >
+          <path
+            className="cls-1 overflow-hidden"
+            d="m.53.5h1920s-.5,366.79,0,585.65-544.5-207.15-557.5-389.15-832,855-957,465S.03,342.94.53,176.47.53.5.53.5Z"
+          ></path>
+        </svg>
 
-      <div className="container flex lg:flex-row flex-col mx-auto md:py-40 px-5 md:px-0 py-20 gap-20">
-        <div className="xl:w-1/3 justify-end flex text-right lg:w-1/2 z-10">
-          <div className=" flex gap-20 text-xs">
-            <p className="text-thin text-white">
-              Content created with{" "}
-              <a
-                href="https://openai.com"
-                target="_blank"
-                className="text-white hover:text-stone-200"
-                rel="noreferrer"
-              >
-                OpenAI ChatGPT
-              </a>
-              .
-              <br />
-              Responsive TailwindCSS Typographical Article Element.
-              <br />
-              All rights reserved.
-            </p>
+        <div className="container flex lg:flex-row flex-col mx-auto md:py-40 px-5 md:px-0 py-20 gap-20">
+          <div className="xl:w-1/3 justify-end flex text-right lg:w-1/2 z-10">
+            <div className=" flex gap-20 text-xs">
+              <p className="text-thin text-white">
+                Content created with{" "}
+                <a
+                  href="https://openai.com"
+                  target="_blank"
+                  className="text-white hover:text-stone-200"
+                  rel="noreferrer"
+                >
+                  OpenAI ChatGPT
+                </a>
+                .
+                <br />
+                Responsive TailwindCSS Typographical Article Element.
+                <br />
+                SVG Animated Background
+                <br />
+                All rights reserved.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div className="flex flex-col gap-20 xl:w-1/3 lg:w-1/2">
-          <h1 className="md:text-[100px] text-[70px] leading-[55px] font-extrabold uppercase tracking-tighter md:leading-[80px] ml-[-5px] mt-[-5px] transform-gpu transition duration-500 ease-out skew-y-12">
-            Master of the Digital Domain
-          </h1>
+          <div className="flex flex-col gap-20 xl:w-1/3 lg:w-1/2 z-20">
+            <h1 className="md:text-[100px] text-[70px] leading-[55px] font-extrabold uppercase tracking-tighter md:leading-[80px] ml-[-5px] mt-[-5px] transform-gpu transition duration-500 ease-out skew-y-12">
+              Master of the Digital Domain
+            </h1>
 
-          <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="show"
-            exit="hidden"
-            transition={{ duration: 1 }}
-            className={`gap-10 flex flex-col`}
-          >
-            {chatGpt.map((para, index) => (
-              <motion.p variants={item} key={index}>
-                {para}
-              </motion.p>
-            ))}
-          </motion.div>
+            <motion.div
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              exit="hidden"
+              transition={{ duration: 1 }}
+              className={`gap-10 flex flex-col`}
+            >
+              {chatGpt.map((para, index) => (
+                <motion.p variants={item} key={index}>
+                  {para}
+                </motion.p>
+              ))}
+            </motion.div>
+          </div>
+          <div className="xl:w-1/3 hidden xl:flex" />
         </div>
-        <div className="xl:w-1/3 hidden xl:flex" />
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
