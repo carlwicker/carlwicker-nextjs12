@@ -1,15 +1,10 @@
 // IMPROVE ROTATION CSS, SHOULD COUNTER ROTATE DIV CONTAINING ELEMENTS
 
-import { useRef, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
 export default function Section2() {
   const { ref, inView, entry } = useInView({ threshold: 1 });
-
-  useEffect(() => {
-    console.log("Element is in view: ", inView);
-  }, [inView]);
 
   return (
     <section
@@ -49,8 +44,8 @@ export default function Section2() {
               TailwindCSS on Google Cloud Architecture.
             </p>
             <p className="font-medium">
-              Currently looking for a full time Creative / Front End Developer
-              role in a Brighton Agency.
+              I‘m currently looking for a creative developer role in a Brighton
+              agency.
             </p>
           </motion.div>
 

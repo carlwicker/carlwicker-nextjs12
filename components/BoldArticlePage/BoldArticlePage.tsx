@@ -1,4 +1,9 @@
+import { motion, AnimatePresence } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 export default function BoldArticlePage() {
+  const { ref, inView, entry } = useInView({ threshold: 0 });
+
   return (
     <section className="min-h-screen bg-pink-300 text-black text-xl font-thin overflow-hidden flex bg-gradient-to-r from-indigo-500 lg:p-0">
       <div className="container flex lg:flex-row flex-col mx-auto md:py-40 px-5 md:px-0 py-20 gap-20">
@@ -27,7 +32,13 @@ export default function BoldArticlePage() {
           <h1 className="md:text-[100px] text-[70px] leading-[55px] font-extrabold uppercase tracking-tighter md:leading-[80px] ml-[-5px] mt-[-5px] transform-gpu transition duration-500 ease-out skew-y-12">
             Master of the Digital Domain
           </h1>
-          <div className="gap-10 flex flex-col">
+
+          <div
+            className={`gap-10 flex flex-col transition duration-500 ease-in ${
+              inView ? "opacity-1" : "opacity-0"
+            }`}
+            ref={ref}
+          >
             <p>
               The Master of the Digital Domain is a title that is given to a
               person who is highly skilled in the field of web design and
