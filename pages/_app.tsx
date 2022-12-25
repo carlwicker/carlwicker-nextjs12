@@ -25,21 +25,23 @@ export default function App({ Component, pageProps }: AppProps) {
         initial="pageInitial"
         animate="pageAnimate"
         exit="pageExit"
-        transition={{
-          duration: 0.5,
-        }}
+        transition={
+          {
+            // duration: 0.75,
+          }
+        }
         variants={{
           pageInitial: {
-            opacity: 1,
-            y: "-20vh",
+            // opacity: 1,
+            // y: "-60vh",
           },
           pageAnimate: {
-            opacity: 1,
-            y: "0",
+            // opacity: 1,
+            // y: "0",
           },
           pageExit: {
-            opacity: 0,
-            y: "-20vh",
+            // opacity: 1,
+            // y: "-60vh",
           },
         }}
       >

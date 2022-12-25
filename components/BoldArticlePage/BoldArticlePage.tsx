@@ -1,8 +1,31 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 export default function BoldArticlePage() {
-  const { ref, inView, entry } = useInView({ threshold: 0 });
+  const chatGpt = [
+    "The Master of the Digital Domain is a title that is given to a person who is highly skilled in the field of web design and development. This person is an expert at creating stunning, functional websites that are able to capture the attention and engage the audience of their users.",
+    "The Master of the Digital Domain is someone who is constantly learning and staying up-to-date with the latest technologies and best practices in web design and development. They are always seeking out new challenges and opportunities to improve their skills and push the boundaries of what is possible in the digital world.",
+    "In addition to their technical expertise, the Master of the Digital Domain is also a skilled problem-solver and strategic thinker. They are able to take a project from concept to completion, working closely with clients to understand their needs and create a website that meets their goals.",
+    "The Master of the Digital Domain is a true professional, and is highly respected in the industry for their knowledge, skills, and dedication to their craft. They are the go-to person for any organization or individual looking to create a top-quality website that stands out from the competition.",
+    "Overall, the Master of the Digital Domain is a valuable asset to any team or project, and is someone who truly understands the power of the digital world and how to harness it to create truly epic websites.",
+  ];
+
+  const container = {
+    hidden: { opacity: 0, y: 10 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, transition: { duration: 2 } },
+    show: {
+      opacity: 1,
+      transition: { duration: 1 },
+    },
+  };
 
   return (
     <section className="min-h-screen bg-pink-300 text-black text-xl font-thin overflow-hidden flex bg-gradient-to-r from-indigo-500 lg:p-0">
@@ -33,48 +56,20 @@ export default function BoldArticlePage() {
             Master of the Digital Domain
           </h1>
 
-          <div
-            className={`gap-10 flex flex-col transition duration-500 ease-in ${
-              inView ? "opacity-1" : "opacity-0"
-            }`}
-            ref={ref}
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            exit="hidden"
+            transition={{ duration: 1 }}
+            className={`gap-10 flex flex-col`}
           >
-            <p>
-              The Master of the Digital Domain is a title that is given to a
-              person who is highly skilled in the field of web design and
-              development. This person is an expert at creating stunning,
-              functional websites that are able to capture the attention and
-              engage the audience of their users.
-            </p>
-            <p>
-              The Master of the Digital Domain is someone who is constantly
-              learning and staying up-to-date with the latest technologies and
-              best practices in web design and development. They are always
-              seeking out new challenges and opportunities to improve their
-              skills and push the boundaries of what is possible in the digital
-              world.
-            </p>
-            <p>
-              In addition to their technical expertise, the Master of the
-              Digital Domain is also a skilled problem-solver and strategic
-              thinker. They are able to take a project from concept to
-              completion, working closely with clients to understand their needs
-              and create a website that meets their goals.
-            </p>
-            <p>
-              The Master of the Digital Domain is a true professional, and is
-              highly respected in the industry for their knowledge, skills, and
-              dedication to their craft. They are the go-to person for any
-              organization or individual looking to create a top-quality website
-              that stands out from the competition.
-            </p>
-            <p>
-              Overall, the Master of the Digital Domain is a valuable asset to
-              any team or project, and is someone who truly understands the
-              power of the digital world and how to harness it to create truly
-              epic websites.
-            </p>
-          </div>
+            {chatGpt.map((para, index) => (
+              <motion.p variants={item} key={index}>
+                {para}
+              </motion.p>
+            ))}
+          </motion.div>
         </div>
         <div className="xl:w-1/3 hidden xl:flex" />
       </div>
