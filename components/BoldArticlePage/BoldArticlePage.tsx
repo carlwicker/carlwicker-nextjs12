@@ -62,8 +62,8 @@ export default function BoldArticlePage() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 800 800"
           className="absolute overflow-hidden lg:-mt-[200px]"
-          opacity={0.1}
-          fill="pink"
+          opacity={0.95}
+          fill="white"
         >
           <path
             style={{ transition: "0.3s ease-in-out" }}
@@ -75,12 +75,12 @@ export default function BoldArticlePage() {
         <div className="container flex lg:flex-row flex-col mx-auto md:py-40 px-5 md:px-0 py-20 gap-20">
           <div className="xl:w-1/3 justify-end flex text-right lg:w-1/2 z-10">
             <div className=" flex gap-20 text-xs">
-              <p className="text-thin text-white">
+              <p className="text-thin text-black">
                 Content created with{" "}
                 <a
                   href="https://openai.com"
                   target="_blank"
-                  className="text-white hover:text-stone-200"
+                  className="text-stone-500 hover:text-stone-800"
                   rel="noreferrer"
                 >
                   OpenAI ChatGPT
