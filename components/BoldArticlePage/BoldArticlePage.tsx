@@ -61,15 +61,18 @@ export default function BoldArticlePage() {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 800 800"
-          className="absolute overflow-hidden lg:-mt-[200px]"
-          opacity={0.95}
-          fill="white"
+          className="absolute overflow-hidden lg:-mt-[200px] opacity-0 lg:opacity-20"
+          fill="pink"
         >
-          <path
+          <motion.path
+            // variants={svg}
+            // initial="up"
+            // animate="down"
+            // transition={{ type: "spring" }}
             style={{ transition: "0.3s ease-in-out" }}
             className="cls-1 overflow-hidden"
             d={currentSvgD}
-          ></path>
+          ></motion.path>
         </svg>
 
         <div className="container flex lg:flex-row flex-col mx-auto md:py-40 px-5 md:px-0 py-20 gap-20">
