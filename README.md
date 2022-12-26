@@ -1,1 +1,3 @@
-WIP: https://carlwicker-nextjs12.web.app
+Repository for my live website and experimentation area.
+
+https://carlwicker.co.uk
