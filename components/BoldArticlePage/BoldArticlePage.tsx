@@ -1,14 +1,7 @@
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function BoldArticlePage() {
-  const { ref, inView, entry } = useInView({ threshold: 1 });
-
-  useEffect(() => {
-    console.log(inView);
-  }, [inView]);
-
   const chatGpt = [
     "The Master of the Digital Domain is a title that is given to a person who is highly skilled in the field of web design and development. This person is an expert at creating stunning, functional websites that are able to capture the attention and engage the audience of their users.",
     "The Master of the Digital Domain is someone who is constantly learning and staying up-to-date with the latest technologies and best practices in web design and development. They are always seeking out new challenges and opportunities to improve their skills and push the boundaries of what is possible in the digital world.",
@@ -38,13 +31,29 @@ export default function BoldArticlePage() {
   const svg = {
     up: {
       d: "m.53.5h1920s-.5,366.79,0,585.65-544.5-207.15-557.5-389.15-832,855-957,465S.03,342.94.53,176.47.53.5.53.5Z",
-      transition: { duration: 2 },
     },
     down: {
       d: "m.53.5h1920s-.5,366.79,0,585.65-307.5-389.15-557.5-389.15S674.03,473,492.03,507,.03,342.94.53,176.47.53.5.53.5Z",
-      transition: { duration: 2 },
     },
   };
+
+  const [currentSvgD, setSvgCurrentD] = useState<string>(svg.up.d);
+
+  const BgSvgLoop = () => {
+    setTimeout(() => {
+      if (currentSvgD === svg.up.d) {
+        setSvgCurrentD(svg.down.d);
+      } else {
+        setSvgCurrentD(svg.up.d);
+      }
+    }, 300);
+
+    return currentSvgD;
+  };
+
+  useEffect(() => {
+    BgSvgLoop();
+  }, [currentSvgD]);
 
   return (
     <div className="relative overflow-hidden p-0 m-0">
@@ -56,11 +65,11 @@ export default function BoldArticlePage() {
           opacity={0.1}
           fill="pink"
         >
-          <motion.path
-            transition={{ type: "spring", stiffness: 100 }}
+          <path
+            style={{ transition: "0.3s ease-in-out" }}
             className="cls-1 overflow-hidden"
-            d={inView ? svg.down.d : svg.up.d}
-          ></motion.path>
+            d={currentSvgD}
+          ></path>
         </svg>
 
         <div className="container flex lg:flex-row flex-col mx-auto md:py-40 px-5 md:px-0 py-20 gap-20">
@@ -88,10 +97,7 @@ export default function BoldArticlePage() {
           </div>
 
           <div className="flex flex-col gap-20 xl:w-1/3 lg:w-1/2 z-20">
-            <h1
-              ref={ref}
-              className="md:text-[100px] text-[70px] leading-[55px] font-extrabold uppercase tracking-tighter md:leading-[80px] ml-[-5px] mt-[-5px] transform-gpu transition duration-500 ease-out skew-y-12"
-            >
+            <h1 className="md:text-[100px] text-[70px] leading-[55px] font-extrabold uppercase tracking-tighter md:leading-[80px] ml-[-5px] mt-[-5px] transform-gpu transition duration-500 ease-out skew-y-12">
               Master of the Digital Domain
             </h1>
 
