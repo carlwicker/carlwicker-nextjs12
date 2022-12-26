@@ -83,7 +83,7 @@ export default function BoldArticlePage() {
                 <a
                   href="https://openai.com"
                   target="_blank"
-                  className="text-stone-800 hover:text-stone-900"
+                  className="text-black"
                   rel="noreferrer"
                 >
                   OpenAI ChatGPT
