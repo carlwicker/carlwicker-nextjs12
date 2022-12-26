@@ -55,14 +55,16 @@ export default function BoldArticlePage() {
     BgSvgLoop();
   }, [currentSvgD]);
 
+  const [color, setColor] = useState<string>("pink");
+
   return (
     <div className="relative overflow-hidden p-0 m-0">
       <section className="min-h-screen bg-pink-300 text-black text-xl font-thin overflow-hidden	 flex bg-gradient-to-r from-indigo-500 lg:p-0">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 800 800"
-          className="absolute overflow-hidden lg:-mt-[200px] opacity-0 lg:opacity-20"
-          fill="pink"
+          className="absolute overflow-hidden lg:-mt-[200px] opacity-0 lg:opacity-50"
+          fill={color}
         >
           <motion.path
             // variants={svg}
@@ -70,14 +72,14 @@ export default function BoldArticlePage() {
             // animate="down"
             // transition={{ type: "spring" }}
             style={{ transition: "0.3s ease-in-out" }}
-            className="cls-1 overflow-hidden"
+            className="overflow-hidden"
             d={currentSvgD}
           ></motion.path>
         </svg>
 
         <div className="container flex lg:flex-row flex-col mx-auto md:py-40 px-5 md:px-0 py-20 gap-20">
-          <div className="xl:w-1/3 justify-end flex text-right lg:w-1/2 z-10">
-            <div className=" flex gap-20 text-xs">
+          <div className="xl:w-1/3 justify-start flex flex-col text-right lg:w-1/2 z-10">
+            <div className=" flex gap-20 text-xs justify-end">
               <p className="text-thin text-black">
                 Content created with{" "}
                 <a
@@ -96,6 +98,26 @@ export default function BoldArticlePage() {
                 <br />
                 All rights reserved.
               </p>
+            </div>
+            <div className="gap-2 mt-5 justify-end hidden lg:flex">
+              <div
+                id="white"
+                className={`w-[25px] h-[25px] bg-white hover:scale-125 transition rounded-md ${
+                  color === "white" ? "border-white" : "border-black"
+                } cursor-pointer border-[2px] border-black hover:border-black`}
+                onClick={() => {
+                  setColor("white");
+                }}
+              ></div>
+              <div
+                id="pink"
+                className={`w-[25px] h-[25px] bg-pink-300 hover:scale-125 transition ${
+                  color === "pink" ? "border-white" : "border-black"
+                }  rounded-md cursor-pointer border-[2px] border-black hover:border-black `}
+                onClick={() => {
+                  setColor("pink");
+                }}
+              ></div>
             </div>
           </div>
 
