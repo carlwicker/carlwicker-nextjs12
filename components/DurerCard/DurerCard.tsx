@@ -6,12 +6,13 @@ export default function DurerCard() {
       <div className="container min-h-full mx-auto flex py-20 flex-col p-5">
         <Image
           src={"./img/carl_durer.png"}
-          width={400}
-          height={400}
+          width={492}
+          height={512}
           alt="Carl Durer"
-          className="rounded-[50%] mx-auto"
+          className="rounded-[50%] self-center"
         />
-        <div className="text-center text-sm p-5">
+
+        <div className="text-sm p-5 text-center">
           Created by DALL·E 2 AI from a photographic self portrait <br /> In the
           style of Albrecht Dürer. <br /> All Rights Reserved.
         </div>
