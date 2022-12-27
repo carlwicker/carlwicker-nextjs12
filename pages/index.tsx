@@ -27,6 +27,7 @@ import Footer from "../components/Footer/Footer";
 import ContactForm from "../components/ContactForm/ContactForm";
 import ArticlePage from "../components/ArticlePage/ArticlePage";
 import BoldArticlePage from "../components/BoldArticlePage/BoldArticlePage";
+import DurerCard from "../components/DurerCard/DurerCard";
 
 export default function Home() {
   return (
@@ -38,6 +39,7 @@ export default function Home() {
     >
       <Section1 />
       <Section2 />
+      <DurerCard />
       <ContactForm />
       <BoldArticlePage />
       <ArticlePage />
