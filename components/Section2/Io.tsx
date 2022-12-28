@@ -12,17 +12,15 @@ export default function Io() {
       </h2>
 
       <p className="text-2xl">
-        Offal tumblr big mood knausgaard Brooklyn taiyaki iceland wayfarers
-        schlitz readymade artisan. Pour-over brunch cold-pressed fanny pack
-        cloud bread snackwave.
+        Eos, ipsa omnis modi in nostrum aliquid perspiciatis ipsam. Illum,
+        aliquid recusandae! Quam veritatis aspernatur blanditiis illo pariatur?
+        In nesciunt animi.
       </p>
       <p>
-        8-bit kale chips green juice roof party. Artisan irony retro swag. Swag
-        ennui messenger bag JOMO, fam tousled offal pork belly woke bitters
-        brunch cliche pour-over art party. Deep v you probably havent heard of
-        them hot chicken, pour-over waistcoat gluten-free neutra +1 Brooklyn
-        XOXO. Photo booth enamel pin listicle single-origin coffee, pabst plaid
-        tattooed +1 venmo.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores,
+        beatae vero reiciendis quia eius pariatur delectus soluta officia
+        tempora dolor nihil dicta quae, iste quis vitae temporibus consectetur
+        saepe harum.
       </p>
     </div>
   );

@@ -16,10 +16,9 @@ export default function Ui() {
         corporis ipsa.
       </p>
       <p>
-        Illum accusantium eligendi maxime voluptatum temporibus. Ea, doloremque?
-        Possimus eaque voluptas reprehenderit? Pour-over brunch cold-pressed
-        fanny pack cloud bread snackwave. Jean shorts same green juice pour-over
-        sartorial tumeric.
+        Debitis mollitia odio unde quisquam dolorum porro corporis eos officiis
+        ex? Quaerat dolore magnam provident aliquid at consequatur fugiat rem
+        laborum aperiam?
       </p>
     </div>
   );
