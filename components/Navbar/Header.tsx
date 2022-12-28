@@ -41,7 +41,7 @@ export default function Header({ setIsOpen, isOpen }: IHeader) {
         </Link>
       </nav>
       <div className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
-        <Hamburger isOpen={isOpen} />
+        {/* <Hamburger isOpen={isOpen} /> */}
       </div>
     </header>
   );
