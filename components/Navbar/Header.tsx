@@ -9,7 +9,6 @@ interface IHeader {
 
 export default function Header({ setIsOpen, isOpen }: IHeader) {
   useEffect(() => {
-    console.log(isOpen);
     document.body.style.overflowY = isOpen ? "hidden" : "scroll";
   }, [isOpen]);
 

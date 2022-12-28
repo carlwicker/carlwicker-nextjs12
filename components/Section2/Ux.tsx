@@ -28,7 +28,7 @@ export default function Ux() {
         Google Cloud Architecture.
       </p>
       <p className="font-medium">
-        I'm currently looking for a creative developer role in a Brighton
+        I&apos;m currently looking for a creative developer role in a Brighton
         agency.
       </p>
     </motion.div>

@@ -16,21 +16,20 @@ export default function SvgBackground({ color }: ISvgBackground) {
 
   const [currentSvgD, setSvgCurrentD] = useState<string>(svg.up.d);
 
-  const BgSvgLoop = () => {
-    setTimeout(() => {
-      if (currentSvgD === svg.up.d) {
-        setSvgCurrentD(svg.down.d);
-      } else {
-        setSvgCurrentD(svg.up.d);
-      }
-    }, 300);
-
-    return () => {};
-  };
-
   useEffect(() => {
+    const BgSvgLoop = () => {
+      setTimeout(() => {
+        if (currentSvgD === svg.up.d) {
+          setSvgCurrentD(svg.down.d);
+        } else {
+          setSvgCurrentD(svg.up.d);
+        }
+      }, 300);
+      return () => {};
+    };
+
     BgSvgLoop();
-  }, [currentSvgD]);
+  }, [currentSvgD, svg.up.d, svg.down.d]);
 
   return (
     <svg
