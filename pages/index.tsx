@@ -22,12 +22,13 @@ const analytics = isSupported().then((yes) => (yes ? getAnalytics(app) : null));
 
 import Section1 from "../components/Section1/Section1";
 import Section2 from "../components/Section2/Section2";
-import Section3 from "../components/Section3/Section3";
 import Footer from "../components/Footer/Footer";
 import ContactForm from "../components/ContactForm/ContactForm";
-import ArticlePage from "../components/ArticlePage/ArticlePage";
 import BoldArticlePage from "../components/BoldArticlePage/BoldArticlePage";
 import DurerCard from "../components/DurerCard/DurerCard";
+
+import Section3 from "../components/Section3/Section3";
+import ArticlePage from "../components/ArticlePage/ArticlePage";
 
 export default function Home() {
   return (
@@ -42,8 +43,8 @@ export default function Home() {
       <DurerCard />
       <ContactForm />
       <BoldArticlePage />
-      <ArticlePage />
-      <Section3 />
+      {/* <ArticlePage /> */}
+      {/* <Section3 /> */}
       <Footer />
     </div>
   );

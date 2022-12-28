@@ -45,6 +45,7 @@ export default function BoldArticlePage() {
           <div className="xl:w-1/3 justify-start flex flex-col text-right lg:w-1/2 z-10">
             <div className="gap-2 mt-5 justify-end  lg:flex flex-col">
               <Credits />
+
               <div className="hidden lg:flex lg:justify-end">
                 <ColorSelector color={color} setColor={setColor} />
               </div>
@@ -55,6 +56,7 @@ export default function BoldArticlePage() {
             <h1 className="md:text-[100px] text-[70px] leading-[55px] font-extrabold uppercase tracking-tighter md:leading-[80px] ml-[-5px] mt-[-5px] transform-gpu transition duration-500 ease-out skew-y-12">
               Master of the Digital Domain
             </h1>
+
             <motion.div
               variants={container}
               initial="hidden"
