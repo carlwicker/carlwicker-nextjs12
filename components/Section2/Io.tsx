@@ -1,6 +1,6 @@
 export default function Io() {
   return (
-    <div className="flex gap-5 justify-center font-normal flex-col text-stone-900">
+    <div className="flex gap-5 justify-center font-normal flex-col text-stone-900 opacity-25">
       <h2
         style={{
           fontFamily: "Archivo",

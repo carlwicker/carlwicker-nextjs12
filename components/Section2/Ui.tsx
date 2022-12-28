@@ -1,6 +1,6 @@
 export default function Ui() {
   return (
-    <div className="flex gap-5 self-center lg:self-start flex-col font-normal text-stone-700">
+    <div className="flex gap-5 self-center lg:self-start flex-col font-normal text-stone-700 opacity-50">
       <h2
         style={{
           fontFamily: "Archivo",
