@@ -23,7 +23,7 @@ export default function ArticlePage() {
             <br />
             Responsive TailwindCSS Typographical Article Element.
             <br />
-            All rights reserved.
+            &#169; All rights reserved.
           </p>
           <h1 className="text-6xl font-thin ">
             The Seed&apos;s Journey: <br /> A Forest Tale

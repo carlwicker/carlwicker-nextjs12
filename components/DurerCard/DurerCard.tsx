@@ -14,7 +14,8 @@ export default function DurerCard() {
 
         <div className="text-sm p-5 text-center">
           Created by DALL·E 2 AI from a photographic self portrait <br /> In the
-          style of Albrecht Dürer. <br /> All Rights Reserved.
+          style of Albrecht Dürer. <br />
+          &#169; All Rights Reserved.
         </div>
       </div>
     </section>

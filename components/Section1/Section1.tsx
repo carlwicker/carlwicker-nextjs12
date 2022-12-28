@@ -42,7 +42,7 @@ export default function Section1() {
       }}
     >
       <div className="container">
-        <h1 className="text-white drop-shadow-lg tracking-[-0.06em] xl:text-7xl lg:-rotate-6 text-6xl bg-red-400 box-border p-0 m-0 uppercase mix-blend-multiply hover:bg-blue-400 cursor-pointer">
+        <h1 className="text-white drop-shadow-lg tracking-[-0.06em] xl:text-7xl lg:-rotate-6 text-6xl bg-red-400 box-border p-0 m-0 uppercase mix-blend-multiply cursor-pointer">
           Adobe Creative / Figma / ReactJS / NextJS / JavaScript / TypeScript /
           CSS / TailwindCSS / Framer Motion / Google Cloud Architechure
         </h1>

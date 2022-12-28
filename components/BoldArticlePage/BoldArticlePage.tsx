@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import ColorSelector from "./ColorSelector";
+import Credits from "./Credits";
+import SvgBackground from "./SvgBackground";
 
 export default function BoldArticlePage() {
+  const [color, setColor] = useState<string>("pink");
+
   const chatGpt = [
     "The Master of the Digital Domain is a title that is given to a person who is highly skilled in the field of web design and development. This person is an expert at creating stunning, functional websites that are able to capture the attention and engage the audience of their users.",
     "The Master of the Digital Domain is someone who is constantly learning and staying up-to-date with the latest technologies and best practices in web design and development. They are always seeking out new challenges and opportunities to improve their skills and push the boundaries of what is possible in the digital world.",
@@ -10,6 +15,7 @@ export default function BoldArticlePage() {
     "Overall, the Master of the Digital Domain is a valuable asset to any team or project, and is someone who truly understands the power of the digital world and how to harness it to create truly epic websites.",
   ];
 
+  // Framer Motion Content Stager Controllers
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -28,96 +34,20 @@ export default function BoldArticlePage() {
     },
   };
 
-  const svg = {
-    up: {
-      d: "m.53.5h1920s-.5,366.79,0,585.65-544.5-207.15-557.5-389.15-832,855-957,465S.03,342.94.53,176.47.53.5.53.5Z",
-    },
-    down: {
-      d: "m.53.5h1920s-.5,366.79,0,585.65-307.5-389.15-557.5-389.15S674.03,473,492.03,507,.03,342.94.53,176.47.53.5.53.5Z",
-    },
-  };
-
-  const [currentSvgD, setSvgCurrentD] = useState<string>(svg.up.d);
-
-  const BgSvgLoop = () => {
-    setTimeout(() => {
-      if (currentSvgD === svg.up.d) {
-        setSvgCurrentD(svg.down.d);
-      } else {
-        setSvgCurrentD(svg.up.d);
-      }
-    }, 300);
-
-    return currentSvgD;
-  };
-
-  useEffect(() => {
-    BgSvgLoop();
-  }, [currentSvgD]);
-
-  const [color, setColor] = useState<string>("pink");
-
   return (
     <div className="relative overflow-hidden p-0 m-0">
-      <section className="min-h-screen bg-pink-300 text-black text-xl font-thin overflow-hidden	 flex bg-gradient-to-r from-indigo-500 lg:p-0">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 800 800"
-          className="absolute overflow-hidden lg:-mt-[200px] opacity-0 lg:opacity-50"
-          fill={color}
-        >
-          <motion.path
-            // variants={svg}
-            // initial="up"
-            // animate="down"
-            // transition={{ type: "spring" }}
-            style={{ transition: "0.3s ease-in-out" }}
-            className="overflow-hidden"
-            d={currentSvgD}
-          ></motion.path>
-        </svg>
+      <section className="min-h-screen bg-pink-300 text-black text-xl font-thin flex bg-gradient-to-r from-indigo-500 lg:p-0">
+        <div className="absolute w-full">
+          <SvgBackground color={color} />
+        </div>
 
         <div className="container flex lg:flex-row flex-col mx-auto md:py-40 px-5 md:px-0 py-20 gap-20">
           <div className="xl:w-1/3 justify-start flex flex-col text-right lg:w-1/2 z-10">
-            <div className=" flex gap-20 text-xs justify-end">
-              <p className="text-thin text-black">
-                Content created with{" "}
-                <a
-                  href="https://openai.com"
-                  target="_blank"
-                  className="text-black"
-                  rel="noreferrer"
-                >
-                  OpenAI ChatGPT
-                </a>
-                .
-                <br />
-                Responsive TailwindCSS Typographical Article Element.
-                <br />
-                SVG Animated Background
-                <br />
-                All rights reserved.
-              </p>
-            </div>
-            <div className="gap-2 mt-5 justify-end hidden lg:flex">
-              <div
-                id="white"
-                className={`w-[25px] h-[25px] bg-white hover:scale-125 transition rounded-md ${
-                  color === "white" ? "border-white" : "border-black"
-                } cursor-pointer border-[2px] hover:border-black`}
-                onClick={() => {
-                  setColor("white");
-                }}
-              ></div>
-              <div
-                id="pink"
-                className={`w-[25px] h-[25px] bg-pink-300 hover:scale-125 transition ${
-                  color === "pink" ? "border-white" : "border-black"
-                }  rounded-md cursor-pointer border-[2px] hover:border-black `}
-                onClick={() => {
-                  setColor("pink");
-                }}
-              ></div>
+            <div className="gap-2 mt-5 justify-end  lg:flex flex-col">
+              <Credits />
+              <div className="hidden lg:flex lg:justify-end">
+                <ColorSelector color={color} setColor={setColor} />
+              </div>
             </div>
           </div>
 
@@ -125,7 +55,6 @@ export default function BoldArticlePage() {
             <h1 className="md:text-[100px] text-[70px] leading-[55px] font-extrabold uppercase tracking-tighter md:leading-[80px] ml-[-5px] mt-[-5px] transform-gpu transition duration-500 ease-out skew-y-12">
               Master of the Digital Domain
             </h1>
-
             <motion.div
               variants={container}
               initial="hidden"
@@ -141,7 +70,8 @@ export default function BoldArticlePage() {
               ))}
             </motion.div>
           </div>
-          <div className="xl:w-1/3 hidden xl:flex" />
+
+          <div className="xl:flex xl:w-1/3 hidden" />
         </div>
       </section>
     </div>
