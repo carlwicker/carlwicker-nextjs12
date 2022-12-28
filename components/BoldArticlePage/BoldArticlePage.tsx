@@ -53,7 +53,7 @@ export default function BoldArticlePage() {
           </div>
 
           <div className="flex flex-col gap-20 xl:w-1/3 lg:w-1/2 z-20">
-            <h1 className="md:text-[100px] text-[70px] leading-[55px] font-extrabold uppercase tracking-tighter md:leading-[80px] ml-[-5px] mt-[-5px] transform-gpu transition duration-500 ease-out skew-y-12">
+            <h1 className="md:text-[90px] text-[70px] leading-[55px] font-extrabold uppercase tracking-tighter md:leading-[80px] ml-[-5px] mt-[-5px] transform-gpu transition duration-500 ease-out skew-y-12">
               Master of the Digital Domain
             </h1>
 
