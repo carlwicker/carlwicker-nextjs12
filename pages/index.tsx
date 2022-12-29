@@ -29,6 +29,7 @@ import DurerCard from "../components/DurerCard/DurerCard";
 
 import Section3 from "../components/Section3/Section3";
 import ArticlePage from "../components/ArticlePage/ArticlePage";
+import TheCurve from "../components/TheCurve/TheCurve";
 
 export default function Home() {
   return (
@@ -45,6 +46,7 @@ export default function Home() {
       <BoldArticlePage />
       {/* <ArticlePage /> */}
       {/* <Section3 /> */}
+      <TheCurve />
       <Footer />
     </div>
   );

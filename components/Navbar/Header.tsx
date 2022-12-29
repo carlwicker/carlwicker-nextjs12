@@ -29,11 +29,7 @@ export default function Header({ setIsOpen, isOpen }: IHeader) {
             HOME
           </button>
         </Link>
-        {/* <Link href={"/resume"}>
-          <button className="text-xs p-2 text-white font-bold hover:text-gray-500 transition ease-in duration-200">
-            RESUME
-          </button>
-        </Link> */}
+
         <Link href={"/contact"}>
           <button className="text-xs p-2 text-white font-bold hover:text-gray-500 transition ease-in duration-200">
             CONTACT
