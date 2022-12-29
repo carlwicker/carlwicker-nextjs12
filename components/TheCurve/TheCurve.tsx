@@ -3,7 +3,7 @@ import Svg from "./Svg";
 export default function TheCurve() {
   return (
     <section
-      className="bg-gray-600 text-white py-20 overflow-hidden"
+      className="bg-gray-600 text-white py-20 overflow-hidden px-5"
       //   style={{ fontFamily: "times" }}
     >
       <div className="container mx-auto flex flex-col gap-20 relative">
@@ -16,9 +16,9 @@ export default function TheCurve() {
           Curve
         </h2> */}
 
-        <div className="flex gap-20 py-20">
-          <div className="flex w-1/3 self-center justify-center z-20"></div>
-          <div className="font-thin text-xl flex-col flex gap-10 w-1/3">
+        <div className="flex py-20 gap-20">
+          <div className="lg:flex lg:w-1/3 hidden"></div>
+          <div className="font-thin text-xl flex-col flex gap-10 lg:w-1/3 w-full">
             {/* <p>
               SVG curves are a way to create smooth, curved lines and shapes in
               Scalable Vector Graphics (SVG) documents. These curves are defined
@@ -38,7 +38,7 @@ export default function TheCurve() {
             <Svg />
           </div>
 
-          <div className="font-thin text-xl flex-col flex gap-10 w-1/3"></div>
+          <div className="font-thin text-xl flex-col lg:flex gap-10 lg:w-1/3 hidden"></div>
         </div>
       </div>
     </section>

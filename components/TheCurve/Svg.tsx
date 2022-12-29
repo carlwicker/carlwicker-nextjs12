@@ -21,8 +21,8 @@ export default function Svg() {
         className=""
       >
         <path
-          stroke="black"
-          strokeDasharray="10 10 10 10"
+          stroke="red"
+          strokeDasharray="10 1"
           d={`M 0,0 q50, ${sliderValue} ,100, 0`}
           className="duration-200"
         />
@@ -31,21 +31,21 @@ export default function Svg() {
           stroke="grey"
           strokeDasharray="5 5 5 5"
           d={`M 0,0 q50, ${sliderValue - 10} ,100, 0`}
-          className="duration-200 "
+          className="duration-200 opacity-10"
         />
 
         <path
           stroke="lightgrey"
           strokeDasharray="2 2 2 2"
           d={`M 0,0 q50, ${sliderValue - 20} ,100, 0`}
-          className="duration-200 "
+          className="duration-200 opacity-10"
         />
 
         <circle
           cx="50"
           cy={sliderValue}
           r="5"
-          fill="darkgrey"
+          fill="red"
           className="duration-200"
         />
 
@@ -53,18 +53,18 @@ export default function Svg() {
           stroke="rgba(255, 255, 255, 0.15)"
           strokeDasharray="20 2"
           d={`M 0,0 l50, ${sliderValue}`}
-          className="duration-200"
+          className="duration-200 opacity-50"
         />
 
         <path
           stroke="rgba(255, 255, 255, 0.15)"
           strokeDasharray="20 2"
           d={`M 100,0 l-50, ${sliderValue}`}
-          className="duration-200"
+          className="duration-200 opacity-50"
         />
       </svg>
       <div className="flex flex-col mx-auto">
-        <div className="mx-auto">
+        <div className="mx-auto text-sm">
           View Box: 100x100 - Curve Center X:50 Y: {sliderValue}
         </div>
         <input
