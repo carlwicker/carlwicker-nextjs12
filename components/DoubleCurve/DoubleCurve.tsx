@@ -9,7 +9,7 @@ export default function DoubleCurve() {
       <div className="container mx-auto">
         <DoubleCurveSvg curveYPos={curveYPos} />
 
-        <div className="slidecontainer text-center mt-10">
+        <div className="slidecontainer text-center mt-5">
           <div>Amplitude</div>
           <input
             type="range"
@@ -17,7 +17,7 @@ export default function DoubleCurve() {
             max="200"
             step="25"
             value={curveYPos}
-            className="slider"
+            className="mt-5"
             id="myRange"
             onChange={(e: any) => {
               let num = e.target.value;

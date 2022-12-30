@@ -6,20 +6,17 @@ interface ISlider {
 export default function Slider({ sliderValue, setSliderValue }: ISlider) {
   return (
     <div className="flex flex-col mx-auto">
-      <div className="text-md text-center py-10">
-        SVG View Box: 100x100 <br />
-        Curve Center X:50 Y: {sliderValue} <br />
-        Amplitude: {sliderValue / 2}
+      <div className="text-md text-center">
+        SVG Curve Center X:50 Y: {sliderValue} <br />
       </div>
       <input
-        style={{ accentColor: "pink", outline: "none", background: "blue" }}
+        style={{}}
         type="range"
         min="0"
         max="100"
         step="25"
         value={sliderValue}
-        className="bg-pink-300  cursor-pointer"
-        id="slider"
+        className="mt-5 cursor-pointer mx-auto"
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
           setSliderValue(e.target.value);
         }}
