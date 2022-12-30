@@ -6,20 +6,8 @@ export default function TheCurve() {
   const [sliderValue, setSliderValue] = useState<any>(50);
 
   return (
-    <section
-      className="bg-black text-white py-20 overflow-hidden px-5"
-      //   style={{ fontFamily: "times" }}
-    >
+    <section className="bg-black text-white py-20 overflow-hidden px-5">
       <div className="container mx-auto flex flex-col gap-20 relative">
-        {/* <h2
-          className="text-[50px] font-black uppercase leading-[40px] w-fit"
-          //   style={{ fontFamily: "times" }}
-        >
-          Learning <br />
-          The SVG <br />
-          Curve
-        </h2> */}
-
         <div className="lg:flex-row flex py-20 gap-20 flex-col">
           <div className="flex flex-col xl:w-1/3 md:w-1/2 self-center lg:w-1/2 w-full">
             <div className="">
@@ -33,6 +21,7 @@ export default function TheCurve() {
               />
             </div>
           </div>
+
           <div className="font-thin text-xl flex-col flex gap-10 xl:w-1/3 w-full lg:w-1/2">
             {/* <p>
               SVG curves are a way to create smooth, curved lines and shapes in

@@ -7,9 +7,16 @@ export default function Svg({ sliderValue }: any) {
       className=""
     >
       <path
+        stroke="white"
+        strokeWidth={0.5}
+        d={`M 0,50 h100, 50`}
+        strokeDasharray="1 1"
+      />
+
+      <path
         stroke="pink"
         strokeWidth="0.5"
-        strokeDasharray="10 1"
+        strokeDasharray="5 1"
         d={`M 0,0 q50, ${sliderValue} ,100, 0`}
         className="duration-200"
       />
