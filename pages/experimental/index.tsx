@@ -3,7 +3,7 @@ import DoubleCurve from "../../components/DoubleCurve/DoubleCurve";
 
 export default function index() {
   return (
-    <div>
+    <div data-scroll-section>
       <TheCurve />
       <DoubleCurve />
     </div>

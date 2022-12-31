@@ -2,33 +2,13 @@
 
 import { useEffect, useState } from "react";
 
-export default function Section1() {
+export default function ContactTop() {
   const [pageWidth, setPageWidth]: any = useState();
 
   useEffect(() => {
     setPageWidth(window.innerWidth);
     window.addEventListener("resize", () => {
       setPageWidth(window.innerWidth);
-    });
-  }, [pageWidth]);
-
-  useEffect(() => {
-    const parallax: any = document.getElementById("paralax");
-
-    if (pageWidth > 870) {
-      parallax.style.backgroundPositionY = "-280px";
-    } else {
-      parallax.style.backgroundPositionY = "0px";
-    }
-
-    window.addEventListener("scroll", () => {
-      let offset = window.pageYOffset - 400;
-
-      if (pageWidth > 870) {
-        parallax.style.backgroundPositionY = offset * 0.7 + "px";
-      } else {
-        parallax.style.backgroundPositionY = 0 + "px";
-      }
     });
   }, [pageWidth]);
 

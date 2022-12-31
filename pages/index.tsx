@@ -26,12 +26,11 @@ import Footer from "../components/Footer/Footer";
 import ContactForm from "../components/ContactForm/ContactForm";
 import BoldArticlePage from "../components/BoldArticlePage/BoldArticlePage";
 import DurerCard from "../components/DurerCard/DurerCard";
-import TheCurve from "../components/TheCurve/TheCurve";
-import DoubleCurve from "../components/DoubleCurve/DoubleCurve";
 
 export default function Home() {
   return (
     <div
+      data-scroll-section
       style={{
         overflow: "hidden",
         // transform: "rotate3d(1, 2, 5, 20deg)",

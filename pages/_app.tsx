@@ -6,9 +6,12 @@ import Head from "next/head";
 import MobileMenu from "../components/Navbar/MobileMenu";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import { useRef } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef(null);
 
   const router = useRouter();
 
@@ -47,7 +50,16 @@ export default function App({ Component, pageProps }: AppProps) {
           <Header isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
 
-        <Component {...pageProps} />
+        <LocomotiveScrollProvider
+          options={{
+            smooth: true,
+            // ... all available Locomotive Scroll instance options
+          }}
+        >
+          <div data-scroll-container>
+            <Component {...pageProps} />
+          </div>
+        </LocomotiveScrollProvider>
       </motion.div>
     </>
   );

@@ -4,7 +4,7 @@ import Footer from "../../components/Footer/Footer";
 
 export default function ContactPage() {
   return (
-    <div>
+    <div data-scroll-section>
       <Top />
       <ContactForm />
       <Footer />

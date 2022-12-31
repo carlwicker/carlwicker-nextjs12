@@ -35,7 +35,7 @@ export default function BoldArticlePage() {
   };
 
   return (
-    <div className="relative overflow-hidden p-0 m-0">
+    <div className="relative overflow-hidden p-0 m-0 ">
       <section className="min-h-screen bg-pink-300 text-black text-xl font-thin flex bg-gradient-to-r from-indigo-500 lg:p-0">
         <div className="absolute w-full">
           <SvgBackground color={color} />
