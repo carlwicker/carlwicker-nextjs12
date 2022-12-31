@@ -42,9 +42,6 @@ export default function Home() {
       <DurerCard />
       <ContactForm />
       <BoldArticlePage />
-
-      <TheCurve />
-      <DoubleCurve />
       <Footer />
     </div>
   );

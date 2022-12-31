@@ -30,6 +30,12 @@ export default function Header({ setIsOpen, isOpen }: IHeader) {
           </button>
         </Link>
 
+        <Link href={"/experimental"}>
+          <button className="text-xs p-2 text-white font-bold hover:text-gray-500 transition ease-in duration-200">
+            EXPERIMENTAL SVG
+          </button>
+        </Link>
+
         <Link href={"/contact"}>
           <button className="text-xs p-2 text-white font-bold hover:text-gray-500 transition ease-in duration-200">
             CONTACT
