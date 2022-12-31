@@ -16,7 +16,7 @@ export default function Section1() {
           data-scroll-speed="2"
         >
           Adobe Creative / Figma / ReactJS / NextJS / JavaScript / TypeScript /
-          CSS / TailwindCSS / Framer Motion / Google Cloud Architechure
+          CSS / TailwindCSS / Google Cloud Architechure
         </h1>
       </div>
     </section>

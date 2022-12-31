@@ -31,6 +31,8 @@ export default function ContactForm() {
       setShowEmail(false);
 
       actions.setSubmitting(false);
+
+      return;
     },
   });
 
