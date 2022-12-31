@@ -4,13 +4,13 @@ import type { AppProps } from "next/app";
 import { useState } from "react";
 import Head from "next/head";
 import MobileMenu from "../components/Navbar/MobileMenu";
-import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { useRef } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const { asPath } = useRouter(); // With next/router
   const containerRef = useRef(null);
 
   const router = useRouter();
@@ -23,29 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta charSet="utf-8" />
       </Head>
       <div className="container">{isOpen && <MobileMenu />}</div>
-      <motion.div
-        key={router.route}
-        initial="pageInitial"
-        animate="pageAnimate"
-        exit="pageExit"
-        transition={{
-          duration: 0.75,
-        }}
-        variants={{
-          pageInitial: {
-            opacity: 1,
-            y: "-60vh",
-          },
-          pageAnimate: {
-            opacity: 1,
-            y: "0",
-          },
-          pageExit: {
-            opacity: 0,
-            // y: "-60vh",
-          },
-        }}
-      >
+      <div key={router.route}>
         <div className="container mx-auto">
           <Header isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
@@ -55,12 +33,15 @@ export default function App({ Component, pageProps }: AppProps) {
             smooth: true,
             // ... all available Locomotive Scroll instance options
           }}
+          watch={[router.asPath]}
+          location={asPath}
+          containerRef={containerRef}
         >
-          <div data-scroll-container>
+          <div data-scroll-container ref={containerRef}>
             <Component {...pageProps} />
           </div>
         </LocomotiveScrollProvider>
-      </motion.div>
+      </div>
     </>
   );
 }

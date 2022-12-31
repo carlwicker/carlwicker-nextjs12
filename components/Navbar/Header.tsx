@@ -13,7 +13,7 @@ export default function Header({ setIsOpen, isOpen }: IHeader) {
   }, [isOpen]);
 
   return (
-    <header className="fade-in duration-1000 ease-in container flex justify-between items-center p-5 h-[50px] fixed z-50">
+    <header className="container flex justify-between items-center p-5 h-[50px] fixed z-50">
       <div className="text-base font-bold hover:scale-105 transition ease-out duration-500 lg:invisible">
         <Link
           href={"/"}
@@ -23,7 +23,7 @@ export default function Header({ setIsOpen, isOpen }: IHeader) {
           UX UI IO
         </Link>
       </div>
-      <nav className="hidden lg:flex gap-3 font-thin">
+      <nav className="flex gap-3 font-thin">
         <Link href={"/"}>
           <button className="text-xs p-2 text-white font-bold hover:text-gray-500 transition ease-in duration-200">
             HOME
