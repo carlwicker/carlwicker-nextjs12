@@ -29,13 +29,7 @@ import DurerCard from "../components/DurerCard/DurerCard";
 
 export default function Home() {
   return (
-    <div
-      data-scroll-section
-      style={{
-        overflow: "hidden",
-        // transform: "rotate3d(1, 2, 5, 20deg)",
-      }}
-    >
+    <div data-scroll-section>
       <Section1 />
       <Section2 />
       <DurerCard />

@@ -1,7 +1,11 @@
 export default function Footer() {
   return (
-    <footer className="bg-neutral-900 lg:h-[400px] py-20 h-[600px]">
-      <div className="container mx-auto flex lg:flex-row flex-col text-xs text-neutral-600 gap-20 justify-end px-5 md:px-0">
+    <footer className="bg-neutral-900 lg:h-[400px] py-10 h-[600px]">
+      <div
+        className="container mx-auto flex lg:flex-row flex-col text-xs text-neutral-600 gap-20 justify-end px-5 md:px-0"
+        data-scroll
+        data-scroll-speed="2"
+      >
         <div className="md:w-1/2 xl:w-1/3">
           <div className="">
             Email:{" "}
