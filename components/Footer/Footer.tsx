@@ -1,10 +1,17 @@
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
 export default function Footer() {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
   return (
     <footer className="bg-neutral-900 lg:h-[400px] py-10 h-[600px]">
-      <div
-        className="container mx-auto flex lg:flex-row flex-col text-xs text-neutral-600 gap-20 justify-end px-5 md:px-0"
-        data-scroll
-        data-scroll-speed="2"
+      <motion.div
+        ref={ref}
+        className={`container mx-auto flex lg:flex-row flex-col text-xs text-neutral-600 gap-20 justify-end px-5 md:px-0 ${
+          isInView ? "mt-0 opacity-100" : "mt-10 opacity-0"
+        } duration-500 ease-in`}
       >
         <div className="md:w-1/2 xl:w-1/3">
           <div className="">
@@ -36,7 +43,7 @@ export default function Footer() {
             Mobile: +44 (0) 7810 830237
           </div>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 }
