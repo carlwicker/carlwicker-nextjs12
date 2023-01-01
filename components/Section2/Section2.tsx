@@ -8,21 +8,21 @@ export default function Section2() {
       style={{
         boxShadow: "20px 25px 45px rgba(0, 0, 0, 0.25)",
       }}
-      className="bg-[#ddd] flex flex-col justify-center w-full py-20 px-5 md:px-0"
+      className="bg-[#ddd] flex flex-col w-full"
     >
-      <div className="container flex self-center xl:gap-10">
+      <div className="container flex self-center">
         <div
-          className={`flex flex-col lg:flex-row xl:gap-20 w-full justify-center lg:py-0 lg:my-10 text-white text-lg gap-10`}
+          className={`flex lg:flex-wrap lg:flex-row flex-col w-full my-20 text-white text-lg gap-10 lg:gap-0`}
         >
-          <div className="w-full lg:w-1/3">
+          <div className="w-full xl:w-1/3 lg:w-1/2">
             <Ux />
           </div>
 
-          <div className="w-full lg:w-1/3">
+          <div className="w-full xl:w-1/3 lg:w-1/2">
             <Ui />
           </div>
 
-          <div className="w-full lg:w-1/3">
+          <div className="w-full xl:w-1/3 lg:w-1/2">
             <Io />
           </div>
         </div>

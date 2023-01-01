@@ -1,10 +1,11 @@
 export default function Io() {
   return (
-    <div className="flex gap-5 justify-center font-normal flex-col text-stone-900 opacity-25">
+    <div className="flex gap-5 justify-center font-normal flex-col text-stone-900 opacity-25 xl:pl-10 lg:pl-0 lg:pr-10 lg:pt-10 xl:pt-0">
       <h2
         style={{
           fontFamily: "Archivo",
           letterSpacing: "-15px",
+          marginLeft: "-10px",
         }}
         className="text-9xl font-black"
       >
