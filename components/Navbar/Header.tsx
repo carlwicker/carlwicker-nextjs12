@@ -13,7 +13,7 @@ export default function Header({ setIsOpen, isOpen }: IHeader) {
   }, [isOpen]);
 
   return (
-    <header className="container flex justify-between items-center p-5 h-[50px] fixed z-50">
+    <header className="container flex justify-between items-center py-5 h-[50px] fixed z-50">
       <div className="text-base font-bold hover:scale-105 transition ease-out duration-500 lg:invisible">
         <Link
           href={"/"}
@@ -25,19 +25,19 @@ export default function Header({ setIsOpen, isOpen }: IHeader) {
       </div>
       <nav className="flex gap-3 font-thin">
         <Link href={"/"}>
-          <button className="text-xs p-2 text-white font-bold hover:text-gray-500 transition ease-in duration-200">
+          <button className="bg-black text-xs p-2 text-white font-bold hover:text-gray-500 transition ease-in duration-200">
             HOME
           </button>
         </Link>
 
         <Link href={"/experimental"}>
-          <button className="text-xs p-2 text-white font-bold hover:text-gray-500 transition ease-in duration-200">
+          <button className="bg-black text-xs p-2 text-white font-bold hover:text-gray-500 transition ease-in duration-200">
             EXPERIMENTAL SVG
           </button>
         </Link>
 
         <Link href={"/contact"}>
-          <button className="text-xs p-2 text-white font-bold hover:text-gray-500 transition ease-in duration-200">
+          <button className="bg-black text-xs p-2 text-white font-bold hover:text-gray-500 transition ease-in duration-200">
             CONTACT
           </button>
         </Link>

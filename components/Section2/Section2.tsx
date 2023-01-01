@@ -8,7 +8,7 @@ export default function Section2() {
       style={{
         boxShadow: "20px 25px 45px rgba(0, 0, 0, 0.25)",
       }}
-      className="bg-[#ddd] flex flex-col w-full"
+      className="bg-[#ddd] flex flex-col w-full p-5"
     >
       <div className="container flex self-center">
         <div

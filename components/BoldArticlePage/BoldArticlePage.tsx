@@ -41,7 +41,7 @@ export default function BoldArticlePage() {
           <SvgBackground color={color} />
         </div>
 
-        <div className="container flex lg:flex-row flex-col mx-auto md:py-40 px-5 md:px-0 py-20 gap-20">
+        <div className="container flex lg:flex-row flex-col mx-auto md:py-40 px-5 py-20 gap-20">
           <div className="xl:w-1/3 justify-start flex flex-col text-right lg:w-1/2 z-10">
             <div className="gap-2 mt-5 justify-end  lg:flex flex-col">
               <Credits />
