@@ -1,28 +1,14 @@
 import Link from "next/link";
-import Hamburger from "./Hamburger";
-import { useEffect } from "react";
 
-interface IHeader {
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  isOpen: Boolean;
-}
+interface IHeader {}
 
-export default function Header({ setIsOpen, isOpen }: IHeader) {
-  useEffect(() => {
-    document.body.style.overflowY = isOpen ? "hidden" : "scroll";
-  }, [isOpen]);
-
+export default function Header({}: IHeader) {
   return (
     <header className="container flex justify-between items-center p-5 fixed z-50">
-      <div className="text-base font-bold hover:scale-105 transition ease-out duration-500 lg:invisible">
-        <Link
-          href={"/"}
-          className={`cursor-pointer text-white ${!isOpen && "hidden"} `}
-          style={{ fontFamily: "times" }}
-        >
-          UX UI IO
-        </Link>
-      </div>
+      <div
+        className="text-base font-bold hover:scale-105 transition ease-out duration-500 lg:invisible"
+        id="ident"
+      ></div>
       <nav className="flex gap-3 font-thin">
         <Link href={"/"}>
           <button className="bg-black text-xs p-2 text-white font-bold hover:text-red-400 transition ease-in duration-200 -rotate-6">
@@ -41,10 +27,16 @@ export default function Header({ setIsOpen, isOpen }: IHeader) {
             CONTACT
           </button>
         </Link>
+
+        <a
+          href="https://github.com/carlwicker"
+          target="_blank"
+          className="bg-black text-xs p-2 text-white font-bold hover:text-green-400 transition ease-in duration-200 -rotate-3 cursor-pointer"
+        >
+          GITHUB
+        </a>
       </nav>
-      <div className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
-        {/* <Hamburger isOpen={isOpen} /> */}
-      </div>
+      <div className="lg:hidden">{/* <Hamburger isOpen={isOpen} /> */}</div>
     </header>
   );
 }

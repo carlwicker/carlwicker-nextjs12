@@ -21,16 +21,16 @@ const app = initializeApp(firebaseConfig);
 const analytics = isSupported().then((yes) => (yes ? getAnalytics(app) : null));
 
 import Section1 from "../components/Section1/Section1";
-import Section1Left from "../components/Section1/Section1RIght";
 import Section2 from "../components/Section2/Section2";
 import Footer from "../components/Footer/Footer";
 import ContactForm from "../components/ContactForm/ContactForm";
 import BoldArticlePage from "../components/BoldArticlePage/BoldArticlePage";
 import DurerCard from "../components/DurerCard/DurerCard";
-import { useRef, useLayoutEffect } from "react";
+import { useRef, useEffect } from "react";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
+import Head from "next/head";
 import Section1Right from "../components/Section1/Section1RIght";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -39,7 +39,7 @@ export default function Home() {
   const { scroll } = useLocomotiveScroll();
   const ref = useRef<HTMLDivElement | null>(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     let ctx: any;
     if (scroll) {
       const element = scroll?.el;
@@ -66,14 +66,16 @@ export default function Home() {
       ctx = gsap.context(() => {
         let sections = gsap.utils.toArray(".section-container");
         gsap.to(ref.current, {
-          xPercent: -100 * (sections.length + 1),
+          xPercent: -100,
+
           scrollTrigger: {
             trigger: ref.current,
             scroller: scroll?.el,
-            start: "top top",
+            start: "top",
             end: "center",
             scrub: 0.5,
             markers: false,
+
             pin: true,
             onRefresh: (self) => console.log("refresh", self.start, self.end),
           },
@@ -85,7 +87,12 @@ export default function Home() {
   }, [scroll]);
 
   return (
-    <div>
+    <>
+      <Head>
+        <title>Carl Wicker : Home</title>
+        <meta property="og:title" content="Carl Wicker : Home" key="title" />
+      </Head>
+
       <div className="section-container flex" ref={ref}>
         <Section1 />
         <Section1Right />
@@ -105,6 +112,6 @@ export default function Home() {
       <div className="section-container">
         <Footer />
       </div>
-    </div>
+    </>
   );
 }
