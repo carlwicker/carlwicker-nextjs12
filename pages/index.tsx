@@ -87,7 +87,7 @@ export default function Home() {
   }, [scroll]);
 
   return (
-    <>
+    <div>
       <Head>
         <title>Carl Wicker : Home</title>
         <meta property="og:title" content="Carl Wicker : Home" key="title" />
@@ -112,6 +112,6 @@ export default function Home() {
       <div className="section-container">
         <Footer />
       </div>
-    </>
+    </div>
   );
 }

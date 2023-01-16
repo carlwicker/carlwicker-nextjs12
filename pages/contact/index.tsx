@@ -5,7 +5,7 @@ import Head from "next/head";
 
 export default function ContactPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Carl Wicker : Contact</title>
         <meta property="og:title" content="Carl Wicker : Contact" key="title" />
@@ -16,6 +16,6 @@ export default function ContactPage() {
         <ContactForm />
         <Footer />
       </div>
-    </>
+    </div>
   );
 }
