@@ -73,7 +73,7 @@ export default function Home() {
             start: "top top",
             end: "center",
             scrub: 0.5,
-            markers: true,
+            markers: false,
             pin: true,
             onRefresh: (self) => console.log("refresh", self.start, self.end),
           },
