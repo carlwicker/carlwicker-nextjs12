@@ -31,6 +31,7 @@ export default function Header({}: IHeader) {
         <a
           href="https://github.com/carlwicker"
           target="_blank"
+          rel="noreferrer"
           className="bg-black text-xs p-2 text-white font-bold hover:text-green-400 transition ease-in duration-200 -rotate-3 cursor-pointer"
         >
           GITHUB
