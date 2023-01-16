@@ -30,11 +30,11 @@ export default function Header({ setIsOpen, isOpen }: IHeader) {
           </button>
         </Link>
 
-        <Link href={"/experimental"}>
+        {/* <Link href={"/experimental"}>
           <button className="bg-black text-xs p-2 text-white font-bold hover:text-green-400 transition ease-in duration-200 -rotate-12">
             EXPERIMENTAL SVG
           </button>
-        </Link>
+        </Link> */}
 
         <Link href={"/contact"}>
           <button className="bg-black text-xs p-2 text-white font-bold hover:text-blue-400 transition ease-in duration-200 -rotate-3">

@@ -1,53 +1,33 @@
 import "../styles/globals.css";
-import Header from "../components/Navbar/Header";
+import { useRef } from "react";
 import type { AppProps } from "next/app";
-import { useState } from "react";
-import Head from "next/head";
-import MobileMenu from "../components/Navbar/MobileMenu";
 import { useRouter } from "next/router";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
-import { useRef } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const { asPath } = useRouter(); // With next/router
+  const { asPath } = useRouter();
   const containerRef = useRef(null);
-
-  const router = useRouter();
-
   return (
-    <>
-      <Head>
-        <title>UX/UI/IO</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta charSet="utf-8" />
-      </Head>
-      <div className="container">{isOpen && <MobileMenu />}</div>
-      <div key={router.route}>
-        <div className="container mx-auto">
-          <Header isOpen={isOpen} setIsOpen={setIsOpen} />
-        </div>
-
-        <LocomotiveScrollProvider
-          options={{
-            smooth: true,
-            smartphone: {
-              breakpoint: 0,
-              smooth: true,
-            },
-            tablet: {
-              smooth: true,
-            },
-          }}
-          watch={[router.asPath]}
-          location={asPath}
-          containerRef={containerRef}
-        >
-          <div data-scroll-container ref={containerRef}>
-            <Component {...pageProps} />
-          </div>
-        </LocomotiveScrollProvider>
+    <LocomotiveScrollProvider
+      options={{
+        smooth: true,
+        smartphone: {
+          smooth: true,
+        },
+        tablet: {
+          smooth: true,
+        },
+      }}
+      watch={[]}
+      location={asPath}
+      onLocationChange={(scroll: any) =>
+        scroll.scrollTo(0, { duration: 0, disableLerp: true })
+      }
+      containerRef={containerRef}
+    >
+      <div data-scroll-container ref={containerRef}>
+        <Component {...pageProps} />
       </div>
-    </>
+    </LocomotiveScrollProvider>
   );
 }

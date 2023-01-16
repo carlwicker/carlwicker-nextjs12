@@ -11,7 +11,7 @@ export default function Footer() {
         ref={ref}
         className={`container mx-auto flex lg:flex-row flex-col text-xs text-neutral-600 gap-20 justify-end px-5 ${
           isInView ? "mt-0 opacity-100" : "mt-10 opacity-0"
-        } duration-500 ease-in`}
+        } duration-700 ease-in`}
       >
         <div className="md:w-1/2 xl:w-1/3">
           <div className="">
