@@ -1,25 +1,3 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics, isSupported } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: process.env.apiKey,
-  authDomain: process.env.authDomain,
-  projectId: process.env.projectId,
-  storageBucket: process.env.storageBucket,
-  messagingSenderId: process.env.messagingSenderId,
-  appId: process.env.appId,
-  measurementId: process.env.measurementId,
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = isSupported().then((yes) => (yes ? getAnalytics(app) : null));
-
 import Section1 from "../components/Section1/Section1";
 import Section2 from "../components/Section2/Section2";
 import Footer from "../components/Footer/Footer";
@@ -37,10 +15,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const { scroll } = useLocomotiveScroll();
-  const ref = useRef<HTMLDivElement | null>(null);
+  const section1Ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    let ctx: any;
+    let sectionOneContext: any;
     if (scroll) {
       const element = scroll?.el;
       scroll.on("scroll", ScrollTrigger.update);
@@ -63,27 +41,27 @@ export default function Home() {
       });
       ScrollTrigger.addEventListener("refresh", () => scroll?.update());
 
-      ctx = gsap.context(() => {
+      sectionOneContext = gsap.context(() => {
         let sections = gsap.utils.toArray(".section-container");
-        gsap.to(ref.current, {
+        gsap.to(section1Ref.current, {
           xPercent: -100,
 
           scrollTrigger: {
-            trigger: ref.current,
+            trigger: section1Ref.current,
             scroller: scroll?.el,
             start: "top",
-            end: "center",
+            end: "bottom",
             scrub: 0.5,
-            markers: false,
+            markers: true,
 
             pin: true,
             onRefresh: (self) => console.log("refresh", self.start, self.end),
           },
         });
         ScrollTrigger.refresh();
-      }, ref);
+      }, section1Ref);
     }
-    return () => ctx && ctx.revert();
+    return () => sectionOneContext && sectionOneContext.revert();
   }, [scroll]);
 
   return (
@@ -93,25 +71,20 @@ export default function Home() {
         <meta property="og:title" content="Carl Wicker : Home" key="title" />
       </Head>
 
-      <div className="section-container flex" ref={ref}>
+      <div className="section-container flex" ref={section1Ref}>
         <Section1 />
         <Section1Right />
       </div>
-      <div className="section-container">
-        <Section2 />
-      </div>
-      <div className="section-container">
-        <DurerCard />
-      </div>
-      <div className="section-container">
-        <ContactForm />
-      </div>
-      <div className="section-container">
-        <BoldArticlePage />
-      </div>
-      <div className="section-container">
-        <Footer />
-      </div>
+
+      <Section2 />
+
+      <DurerCard />
+
+      <ContactForm />
+
+      <BoldArticlePage />
+
+      <Footer />
     </div>
   );
 }

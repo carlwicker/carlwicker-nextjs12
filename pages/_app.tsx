@@ -1,4 +1,21 @@
 import "../styles/globals.css";
+
+import { initializeApp } from "firebase/app";
+import { getAnalytics, isSupported } from "firebase/analytics";
+
+const firebaseConfig = {
+  apiKey: process.env.apiKey,
+  authDomain: process.env.authDomain,
+  projectId: process.env.projectId,
+  storageBucket: process.env.storageBucket,
+  messagingSenderId: process.env.messagingSenderId,
+  appId: process.env.appId,
+  measurementId: process.env.measurementId,
+};
+
+const app = initializeApp(firebaseConfig);
+const analytics = isSupported().then((yes) => (yes ? getAnalytics(app) : null));
+
 import { useRef } from "react";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";

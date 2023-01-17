@@ -11,8 +11,12 @@ export default function Section1Right() {
         }}
       >
         <div className="container">
-          <h1 className="text-white text-left drop-shadow-lg justify-left flex -rotate-6 tracking-[-0.06em] xl:text-[160px] fit text-6xl  align-middle bg-black box-border uppercase mix-blend-multiply overflow-y-hidden z-0">
-            TESTING SOMETHING NEW
+          <h1
+            data-scroll
+            data-scroll-speed="-3"
+            className="text-white text-left drop-shadow-lg justify-left flex -rotate-6 tracking-[-0.06em] xl:text-[160px] fit text-6xl  align-middle bg-black box-border uppercase mix-blend-multiply overflow-y-hidden z-0"
+          >
+            TESTING EXPERIMENTAL SCROLL
           </h1>
         </div>
       </section>
