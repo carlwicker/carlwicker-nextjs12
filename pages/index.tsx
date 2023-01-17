@@ -10,15 +10,21 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
 import Head from "next/head";
 import Section1Right from "../components/Section1/Section1RIght";
+import XScrollOne from "../components/XScroll/XScrollOne";
+import XScrollTwo from "../components/XScroll/XScrollTwo";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const { scroll } = useLocomotiveScroll();
   const section1Ref = useRef<HTMLDivElement | null>(null);
+  const xScrollRef = useRef<HTMLDivElement | null>(null);
 
+  // Scroll Trigger & Locomotive Scroll
   useEffect(() => {
     let sectionOneContext: any;
+    let xScrollContext: any;
+
     if (scroll) {
       const element = scroll?.el;
       scroll.on("scroll", ScrollTrigger.update);
@@ -41,27 +47,45 @@ export default function Home() {
       });
       ScrollTrigger.addEventListener("refresh", () => scroll?.update());
 
+      // Top Scroll Controller
       sectionOneContext = gsap.context(() => {
-        let sections = gsap.utils.toArray(".section-container");
         gsap.to(section1Ref.current, {
           xPercent: -100,
-
           scrollTrigger: {
             trigger: section1Ref.current,
             scroller: scroll?.el,
             start: "top",
-            end: "bottom",
-            scrub: 0.5,
-            markers: true,
-
+            end: "center",
+            scrub: 1,
+            markers: false,
             pin: true,
             onRefresh: (self) => console.log("refresh", self.start, self.end),
           },
         });
+
+        xScrollContext = gsap.context(() => {
+          gsap.to(xScrollRef.current, {
+            xPercent: -200,
+            scrollTrigger: {
+              trigger: xScrollRef.current,
+              scroller: scroll?.el,
+              start: "top",
+              end: "bottom",
+              scrub: 1,
+              markers: false,
+              pin: true,
+              onRefresh: (self) => console.log("refresh", self.start, self.end),
+            },
+          });
+        });
+
         ScrollTrigger.refresh();
-      }, section1Ref);
+      }, [section1Ref, xScrollRef]);
     }
-    return () => sectionOneContext && sectionOneContext.revert();
+    return () => {
+      sectionOneContext && sectionOneContext.revert();
+      xScrollContext && xScrollContext.revert();
+    };
   }, [scroll]);
 
   return (
@@ -71,19 +95,22 @@ export default function Home() {
         <meta property="og:title" content="Carl Wicker : Home" key="title" />
       </Head>
 
-      <div className="section-container flex" ref={section1Ref}>
+      <div className="flex" ref={section1Ref}>
         <Section1 />
         <Section1Right />
       </div>
 
       <Section2 />
-
       <DurerCard />
 
+      <div className="flex" ref={xScrollRef}>
+        <Section1Right />
+        <Section1Right />
+        <Section1Right />
+      </div>
+
       <ContactForm />
-
       <BoldArticlePage />
-
       <Footer />
     </div>
   );

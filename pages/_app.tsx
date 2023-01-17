@@ -1,7 +1,5 @@
-import "../styles/globals.css";
-
 import { initializeApp } from "firebase/app";
-import { getAnalytics, isSupported } from "firebase/analytics";
+// import { getAnalytics, isSupported } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: process.env.apiKey,
@@ -14,8 +12,9 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const analytics = isSupported().then((yes) => (yes ? getAnalytics(app) : null));
+// const analytics = isSupported().then((yes) => (yes ? getAnalytics(app) : null));
 
+import "../styles/globals.css";
 import { useRef } from "react";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
@@ -26,30 +25,31 @@ export default function App({ Component, pageProps }: AppProps) {
   const { asPath } = useRouter();
   const containerRef = useRef(null);
   return (
-    <LocomotiveScrollProvider
-      options={{
-        smooth: true,
-        smartphone: {
-          smooth: true,
-        },
-        tablet: {
-          smooth: true,
-        },
-      }}
-      watch={[]}
-      location={asPath}
-      onLocationChange={(scroll: any) =>
-        scroll.scrollTo(0, { duration: 0, disableLerp: true })
-      }
-      containerRef={containerRef}
-    >
-      <div data-scroll-container ref={containerRef}>
-        <div className="">
-          <Header />
-        </div>
-
-        <Component {...pageProps} />
+    <>
+      <div className="w-full flex h-fit">
+        <Header />
       </div>
-    </LocomotiveScrollProvider>
+      <LocomotiveScrollProvider
+        options={{
+          smooth: true,
+          smartphone: {
+            smooth: true,
+          },
+          tablet: {
+            smooth: true,
+          },
+        }}
+        watch={[]}
+        location={asPath}
+        onLocationChange={(scroll: any) =>
+          scroll.scrollTo(0, { duration: 0, disableLerp: true })
+        }
+        containerRef={containerRef}
+      >
+        <div data-scroll-container ref={containerRef}>
+          <Component {...pageProps} />
+        </div>
+      </LocomotiveScrollProvider>
+    </>
   );
 }
