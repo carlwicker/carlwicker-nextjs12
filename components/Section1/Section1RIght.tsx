@@ -2,7 +2,7 @@ export default function Section1Right() {
   return (
     <div className="flex w-[200vw] bg-red-300 z-0">
       <section
-        className="flex flex-col w-[100vw] bg-cover bg-top items-center min-h-screen bg-[url('/img/pic2.webp')] justify-center"
+        className="flex flex-col w-[100vw] bg-cover bg-top items-center min-h-screen bg-[url('/img/pic8.webp')] justify-center"
         style={{
           fontFamily: "Archivo",
           fontWeight: 900,

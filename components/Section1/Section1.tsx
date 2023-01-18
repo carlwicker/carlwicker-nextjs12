@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 
 export default function Section1() {
-  const h1Ref = useRef<HTMLDivElement | null>(null);
+  const h1Ref = useRef<null>(null);
 
   useEffect(() => {
     gsap.fromTo(h1Ref.current, { opacity: 0 }, { opacity: 1, duration: 1 });
@@ -18,10 +18,12 @@ export default function Section1() {
         }}
       >
         <div className="sections-container">
-          <div className="container">
+          <div className="container flex z-40">
             <h1
+              data-scroll
+              data-scroll-speed="2"
               ref={h1Ref}
-              className="text-white drop-shadow-lg tracking-[-0.06em] xl:text-8xl fit text-6xl bg-red-400 box-border uppercase mix-blend-multiply"
+              className="text-white drop-shadow-lg tracking-[-0.06em] xl:text-8xl fit text-6xl bg-red-400 box-border uppercase"
             >
               Adobe Creative / Figma / ReactJS / NextJS / JavaScript /
               TypeScript / CSS / TailwindCSS / Google Cloud Architechure

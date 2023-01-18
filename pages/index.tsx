@@ -12,6 +12,7 @@ import Head from "next/head";
 import Section1Right from "../components/Section1/Section1RIght";
 import XScrollOne from "../components/XScroll/XScrollOne";
 import XScrollTwo from "../components/XScroll/XScrollTwo";
+import Xyz from "../components/Xyz/Xyz";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -96,14 +97,15 @@ export default function Home() {
       </Head>
 
       <div className="flex" ref={section1Ref}>
-        <Section1 />
-        <Section1Right />
+        {/* <Section1 />
+        <Section1Right /> */}
       </div>
 
+      <Section1 />
       <Section2 />
       <DurerCard />
 
-      <div className="flex" ref={xScrollRef}>
+      <div className="flex w-[100vw] h-[100vh" ref={xScrollRef}>
         <Section1Right />
         <Section1Right />
         <Section1Right />

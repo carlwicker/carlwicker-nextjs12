@@ -3,7 +3,11 @@ import Image from "next/image";
 export default function DurerCard() {
   return (
     <section className="bg-stone-300">
-      <div className="container mx-auto flex py-20 flex-col p-5">
+      <div
+        className="container mx-auto flex py-20 flex-col p-5"
+        data-scroll
+        data-scroll-speed="2"
+      >
         <Image
           src={"./img/carl_durer.png"}
           width={492}
