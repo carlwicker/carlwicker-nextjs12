@@ -33,7 +33,7 @@ export default function App({ Component, pageProps }: AppProps) {
         options={{
           smooth: true,
           smartphone: {
-            smooth: true,
+            smooth: false,
           },
           tablet: {
             smooth: true,
