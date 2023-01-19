@@ -43,7 +43,7 @@ export default function ContactForm() {
     >
       <div className="container flex mx-auto py-20 px-5 lg:gap-20 md:gap-20 text-lg flex-col lg:flex-row gap-0">
         <div className="xl:w-1/3 xl:flex hidden"></div>
-        <div className="flex flex-col xl:w-1/3 lg:w-1/2 mt-5 min-h-fit font-thin gap-10">
+        <div className="lg:flex flex-col xl:w-1/3 lg:w-1/2 mt-5 min-h-fit font-thin gap-10 hidden">
           <h2 className="text-2xl">
             Aliquid sapiente fugit ab maxime minus quos. Ipsa cupiditate
             asperiores mollitia fuga?
@@ -81,8 +81,7 @@ export default function ContactForm() {
         <div className="flex flex-col xl:w-1/3 lg:w-1/2 mt-5 font-thin gap-10">
           <p>
             Please feel free to contact me with any queries regarding my
-            design/development work. I&lsquo;m currently looking for a creative
-            developer role in a Brighton agency.
+            design/development work.
           </p>
           <div className="font-thin  w-full">
             <form

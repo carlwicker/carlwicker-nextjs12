@@ -4,7 +4,7 @@ export default function Ux() {
   return (
     <motion.div
       whileInView={{ color: "#60a5fa" }}
-      transition={{ duration: 0.25, delay: 0.5 }}
+      transition={{ duration: 0.25, delay: 0.75 }}
       exit={{ color: "#78716c" }}
       className={`flex gap-5 self-center lg:self-start flex-col font-lg font-normal text-stone-500 xl:pr-10 lg:pl-0 lg:pr-10`}
     >
@@ -22,15 +22,10 @@ export default function Ux() {
         I&apos;m a freelance graphic designer and web developer living in
         Brighton, UK.
       </p>
-      <p>
-        I build beautiful web sites with clean functional code. I have a passion
-        for layout, typography, CSS, TailwindCSS, Framer Motion and all things
-        front end. I currently build using ReactJS/NextJS & TailwindCSS on
-        Google Cloud Architecture.
-      </p>
-      <p className="font-medium">
-        I&apos;m currently looking for a creative developer role in a Brighton
-        agency.
+      <p className="text-stone-700">
+        IDebitis mollitia odio unde quisquam dolorum porro corporis eos officiis
+        ex? Quaerat dolore magnam provident aliquid at consequatur fugiat rem
+        laborum aperiam?
       </p>
     </motion.div>
   );

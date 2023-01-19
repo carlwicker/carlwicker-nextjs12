@@ -10,8 +10,6 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
 import Head from "next/head";
 import Section1Right from "../components/Section1/Section1RIght";
-import XScrollOne from "../components/XScroll/XScrollOne";
-import XScrollTwo from "../components/XScroll/XScrollTwo";
 import Xyz from "../components/Xyz/Xyz";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -64,6 +62,7 @@ export default function Home() {
           },
         });
 
+        // XScroll Controller
         xScrollContext = gsap.context(() => {
           gsap.to(xScrollRef.current, {
             xPercent: -200,
@@ -71,9 +70,9 @@ export default function Home() {
               trigger: xScrollRef.current,
               scroller: scroll?.el,
               start: "top",
-              end: "bottom",
+              end: 5000,
               scrub: 1,
-              markers: false,
+              markers: true,
               pin: true,
               onRefresh: (self) => console.log("refresh", self.start, self.end),
             },
@@ -101,18 +100,22 @@ export default function Home() {
         <Section1Right /> */}
       </div>
 
+      {/* <Xyz /> */}
+
       <Section1 />
       <Section2 />
       <DurerCard />
 
-      <div className="flex w-[100vw] h-[100vh" ref={xScrollRef}>
+      <div className="w-[100vw] h-[100vh hidden lg:flex" ref={xScrollRef}>
         <Section1Right />
         <Section1Right />
         <Section1Right />
       </div>
 
       <ContactForm />
-      <BoldArticlePage />
+      <div className="hidden lg:block">
+        <BoldArticlePage />
+      </div>
       <Footer />
     </div>
   );
