@@ -6,6 +6,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .clip-path-one {
+    clip-path: polygon(0% 17%, 93% 15%, 100% 0%, 95% 100%);
+  }
+
+  .clip-path-two {
+    clip-path: polygon(0% 17%, 93% 5%, 100% 0%, 0% 100%);
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

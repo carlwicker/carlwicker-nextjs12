@@ -37,7 +37,7 @@ export default function Footer() {
             United Kingdom
           </div>
 
-          <div className="">
+          <div>
             Tel: +44 (0) 1273 244736
             <br />
             Mobile: +44 (0) 7810 830237
