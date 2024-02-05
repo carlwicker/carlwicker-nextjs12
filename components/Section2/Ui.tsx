@@ -9,7 +9,7 @@ export default function Ui() {
         }}
         className="text-9xl font-black"
       >
-        UI
+        02
       </h2>
       <p className="text-2xl">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla illo

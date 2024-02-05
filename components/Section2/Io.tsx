@@ -9,7 +9,7 @@ export default function Io() {
         }}
         className="text-9xl font-black"
       >
-        IO
+        03
       </h2>
 
       <p className="text-2xl">

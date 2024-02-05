@@ -11,6 +11,8 @@ import gsap from "gsap";
 import Head from "next/head";
 import Section1Right from "../components/Section1/Section1RIght";
 import Xyz from "../components/Xyz/Xyz";
+import PageTransition from "../components/pageTramsitionTest/pageTransition";
+import PercentCounter from "../components/MsCounter/PercentCounter";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -94,29 +96,30 @@ export default function Home() {
         <title>Carl Wicker : Home</title>
         <meta property="og:title" content="Carl Wicker : Home" key="title" />
       </Head>
-
       <div className="flex" ref={section1Ref}>
         {/* <Section1 />
         <Section1Right /> */}
       </div>
-
       {/* <Xyz /> */}
-
+      {/* <div className="absolute top-0 left-0 w-full h-full z-50">
+        <PageTransition />
+      </div> */}
+      <Footer />
       <Section1 />
-      <Section2 />
+      {/* <Section2 /> */}
       <DurerCard />
-
       <div className="w-[100vw] h-[100vh hidden lg:flex" ref={xScrollRef}>
         <Section1Right />
         <Section1Right />
         <Section1Right />
       </div>
-
       <ContactForm />
       <div className="hidden lg:block">
         <BoldArticlePage />
       </div>
+
       <Footer />
+      <PercentCounter />
     </div>
   );
 }

@@ -1,6 +1,15 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Ux() {
+  const ulElement = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 1, duration: 2 },
+      exit: { opacity: 0 },
+    },
+  };
+
   return (
     <motion.div
       whileInView={{ color: "#60a5fa" }}
@@ -16,16 +25,11 @@ export default function Ux() {
         }}
         className="text-9xl font-black"
       >
-        UX
+        01
       </h2>
       <p className="text-2xl">
         I&apos;m a freelance graphic designer and web developer living in
         Brighton, UK.
-      </p>
-      <p className="text-stone-700">
-        IDebitis mollitia odio unde quisquam dolorum porro corporis eos officiis
-        ex? Quaerat dolore magnam provident aliquid at consequatur fugiat rem
-        laborum aperiam?
       </p>
     </motion.div>
   );

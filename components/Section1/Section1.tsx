@@ -4,31 +4,23 @@ import { Power4 } from "gsap";
 
 export default function Section1() {
   const h1Ref = useRef<HTMLDivElement | null>(null);
-  const clipPathRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    gsap.fromTo(h1Ref.current, { opacity: 0 }, { opacity: 1, duration: 1 });
-  }, []);
-
-  useEffect(() => {
-    gsap.to(clipPathRef.current, {
-      opacity: 1,
-      duration: 3,
-      clipPath: `polygon(5% 10%, 93% 5%, 95% 90%, 5% 95%)`,
-      ease: Power4.easeOut,
-    });
+    gsap.fromTo(
+      h1Ref.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 1.5, ease: Power4.easeIn }
+    );
   }, []);
 
   return (
     <div className="flex bg-white z-10">
       <div></div>
       <section
-        ref={clipPathRef}
         style={{
           fontFamily: "Archivo",
           fontWeight: 900,
-          clipPath: `polygon(10% 50%, 95% 55%, 89% 50%, 5% 50%)`,
-          opacity: 0,
+          opacity: 1,
         }}
         className="flex flex-col w-[100vw] bg-cover items-center min-h-screen bg-[url('/img/pic3.webp')] fit bg-center break-all justify-center p-5 z-10 "
       >
