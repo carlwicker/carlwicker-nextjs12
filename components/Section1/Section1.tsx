@@ -29,7 +29,7 @@ export default function Section1() {
             data-scroll
             data-scroll-speed="2"
             ref={h1Ref}
-            className="text-white drop-shadow-lg tracking-[-0.06em] xl:text-9xl text-5xl bg-red-400 box-border uppercase"
+            className="text-white drop-shadow-lg tracking-[-0.06em] xl:text-7xl text-3xl bg-red-400 box-border uppercase"
           >
             Adobe Creative / Figma / ReactJS / NextJS / JavaScript / TypeScript
             / CSS / TailwindCSS / Google Firebase

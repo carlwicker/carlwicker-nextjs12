@@ -1,0 +1,30 @@
+[debug] [2024-02-06T14:02:33.405Z] ----------------------------------------------------------------------
+[debug] [2024-02-06T14:02:33.407Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-02-06T14:02:33.407Z] CLI Version:   12.8.0
+[debug] [2024-02-06T14:02:33.407Z] Platform:      win32
+[debug] [2024-02-06T14:02:33.407Z] Node Version:  v20.11.0
+[debug] [2024-02-06T14:02:33.408Z] Time:          Tue Feb 06 2024 14:02:33 GMT+0000 (Greenwich Mean Time)
+[debug] [2024-02-06T14:02:33.408Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-06T14:02:33.410Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-02-06T14:02:33.506Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-06T14:02:33.506Z] > authorizing via signed-in user (carlwicker@gmail.com)
+[debug] [2024-02-06T14:02:33.506Z] [iam] checking project carlwicker-nextjs12 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-02-06T14:02:33.507Z] > refreshing access token with scopes: []
+[debug] [2024-02-06T14:02:33.508Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-02-06T14:02:33.508Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-02-06T14:02:33.624Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-02-06T14:02:33.624Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-02-06T14:02:33.730Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/carlwicker-nextjs12:testIamPermissions [none]
+[debug] [2024-02-06T14:02:33.730Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/carlwicker-nextjs12:testIamPermissions x-goog-quota-user=projects/carlwicker-nextjs12
+[debug] [2024-02-06T14:02:33.730Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/carlwicker-nextjs12:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-02-06T14:02:33.847Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-02-06T14:02:33.847Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-02-06T14:02:33.930Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/carlwicker-nextjs12:testIamPermissions 200
+[debug] [2024-02-06T14:02:33.931Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/carlwicker-nextjs12:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-02-06T14:02:33.931Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/carlwicker-nextjs12/serviceAccounts/carlwicker-nextjs12@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-02-06T14:02:33.931Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/carlwicker-nextjs12/serviceAccounts/carlwicker-nextjs12@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-02-06T14:02:34.599Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/carlwicker-nextjs12/serviceAccounts/carlwicker-nextjs12@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-02-06T14:02:34.600Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/carlwicker-nextjs12/serviceAccounts/carlwicker-nextjs12@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-02-06T14:02:34.600Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/carlwicker-nextjs12 [none]
+[debug] [2024-02-06T14:02:34.862Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/carlwicker-nextjs12 200

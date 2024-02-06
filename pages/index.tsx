@@ -13,6 +13,7 @@ import Section1Right from "../components/Section1/Section1RIght";
 import Xyz from "../components/Xyz/Xyz";
 import PageTransition from "../components/pageTramsitionTest/pageTransition";
 import PercentCounter from "../components/MsCounter/PercentCounter";
+import ThreePointer from "../components/3Pointer.tsx/3Pointer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -106,6 +107,7 @@ export default function Home() {
       </div> */}
       <Footer />
       <Section1 />
+      <ThreePointer />
       {/* <Section2 /> */}
       {/* <DurerCard /> */}
       <div className="w-[100vw] h-[100vh hidden lg:flex" ref={xScrollRef}>
@@ -113,10 +115,10 @@ export default function Home() {
         <Section1Right />
         <Section1Right />
       </div>
-      <ContactForm />
+      {/* <ContactForm />
       <div className="hidden lg:block">
         <BoldArticlePage />
-      </div>
+      </div> */}
 
       <Footer />
       <PercentCounter />
