@@ -79,10 +79,7 @@ export default function ContactForm() {
           </p>
         </div>
         <div className="flex flex-col xl:w-1/3 lg:w-1/2 mt-5 font-thin gap-10">
-          <p>
-            Please feel free to contact me with any queries regarding my
-            design/development work.
-          </p>
+          <p>You can contact me here...</p>
           <div className="font-thin  w-full">
             <form
               onSubmit={formik.handleSubmit}

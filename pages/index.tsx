@@ -107,7 +107,7 @@ export default function Home() {
       <Footer />
       <Section1 />
       {/* <Section2 /> */}
-      <DurerCard />
+      {/* <DurerCard /> */}
       <div className="w-[100vw] h-[100vh hidden lg:flex" ref={xScrollRef}>
         <Section1Right />
         <Section1Right />

@@ -19,17 +19,17 @@ export default function Footer() {
   };
 
   return (
-    <footer className="flex bg-neutral-900 ">
+    <footer className="bg-neutral-900 pt-40 flex">
       <motion.div
         ref={ref}
-        className="p-10 pt-40 tracking-tight flex lg:flex-col xl:flex-col flex-col xl:text-5xl md:text-3xl font-bold uppercase text-neutral-300"
+        className="p-10 tracking-tight flex flex-col xl:text-5xl md:text-3xl font-bold uppercase text-neutral-300"
       >
         {contactData.map((item: any, i: number) => {
           return (
             <motion.a
               key={i}
               href={item.href}
-              className="hover:text-red-400 hover:pl-5 transition-all w-fit"
+              className="hover:text-red-400 hover:pl-5 transition-all"
               style={{ fontFamily: "arial" }}
               initial="hidden"
               whileInView="show"
@@ -41,7 +41,7 @@ export default function Footer() {
           );
         })}
       </motion.div>
-      <motion.div className="flex bg-neutral-900 w-full h-full p-10 pt-40 justify-end">
+      <motion.div className="flex bg-neutral-900 pt-10 pr-10 w-full justify-end">
         <Link href="https://www.instagram.com/carlwicker" target="blank">
           <FaInstagram
             className="text-neutral-300 hover:text-red-400 duration-300 hover:scale-125"

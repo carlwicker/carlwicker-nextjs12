@@ -38,7 +38,7 @@ export default function PercentCounter() {
         style={{ rotate: 0 }}
       >
         <div className="flex">
-          {num}
+          {num}0
           <div className="self-center font-light  text-3xl tracking-normal">
             ms
           </div>
