@@ -21,7 +21,9 @@ export default function PercentCounter() {
 
   return (
     <section
-      className="flex w-full  overflow-hidden transform-gpu bg-[#333] text-[#999] "
+      data-scroll
+      data-scroll-speed="-0"
+      className="flex w-full  overflow-hidden transform-gpu bg-[#333] text-[#999] -mt-[1px] mb-[1px]"
       style={{ fontFamily: "Arial" }}
     >
       <motion.div
@@ -44,7 +46,12 @@ export default function PercentCounter() {
           </div>
         </div>
 
-        <div className="text-sm w-full font-light">{nav}</div>
+        <div
+          className="text-sm w-full font-light uppercase"
+          style={{ fontFamily: "Arial" }}
+        >
+          {nav}
+        </div>
       </motion.div>
     </section>
   );

@@ -13,7 +13,7 @@ import Section1Right from "../components/Section1/Section1RIght";
 import Xyz from "../components/Xyz/Xyz";
 import PageTransition from "../components/pageTramsitionTest/pageTransition";
 import PercentCounter from "../components/MsCounter/PercentCounter";
-import ThreePointer from "../components/3Pointer.tsx/3Pointer";
+import ThreeCanvas from "../components/Three/ThreeCanvas";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -97,17 +97,20 @@ export default function Home() {
         <title>Carl Wicker : Home</title>
         <meta property="og:title" content="Carl Wicker : Home" key="title" />
       </Head>
+
       <div className="flex" ref={section1Ref}>
         {/* <Section1 />
         <Section1Right /> */}
       </div>
       {/* <Xyz /> */}
       {/* <div className="absolute top-0 left-0 w-full h-full z-50">
-        <PageTransition />
+       
       </div> */}
       <Footer />
+
       <Section1 />
-      <ThreePointer />
+      {/* <PageTransition /> */}
+
       {/* <Section2 /> */}
       {/* <DurerCard /> */}
       <div className="w-[100vw] h-[100vh hidden lg:flex" ref={xScrollRef}>
@@ -115,8 +118,9 @@ export default function Home() {
         <Section1Right />
         <Section1Right />
       </div>
-      {/* <ContactForm />
-      <div className="hidden lg:block">
+      <ThreeCanvas />
+      {/* <ContactForm /> */}
+      {/* <div className="hidden lg:block">
         <BoldArticlePage />
       </div> */}
 

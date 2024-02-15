@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const containerRef = useRef(null);
   return (
     <>
-      <div className="w-full flex h-fit">
+      <div className="flex h-fit">
         <Header />
       </div>
       <LocomotiveScrollProvider
