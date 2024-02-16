@@ -7,7 +7,7 @@ export default function Box({ mousePosition, width, height, depth }: any) {
   const boxRef = useRef<Mesh>(null!);
 
   const [isHovered, setIsHovered] = useState(false);
-  const [color, setColor] = useState("#222");
+  const [color, setColor] = useState("white");
   const [isClicked, setIsClicked] = useState(false);
   const [rotationSpeed, setRotationSpeed] = useState(0.01); // Set rotation speed to a non-zero value
 
@@ -30,7 +30,7 @@ export default function Box({ mousePosition, width, height, depth }: any) {
 
   const handleHover = (isHovered: boolean) => {
     setIsHovered(isHovered);
-    setColor(isHovered ? "red" : "#555");
+    setColor(isHovered ? "red" : "white");
   };
 
   const handleClick = () => {

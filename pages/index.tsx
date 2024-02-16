@@ -14,6 +14,7 @@ import Xyz from "../components/Xyz/Xyz";
 import PageTransition from "../components/pageTramsitionTest/pageTransition";
 import PercentCounter from "../components/MsCounter/PercentCounter";
 import ThreeCanvas from "../components/Three/ThreeCanvas";
+import Combined from "../components/CombinedThreeAndContent/Combined";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -108,7 +109,7 @@ export default function Home() {
       <Footer />
       <Section1 />
       {/* <PageTransition /> */}
-      <ThreeCanvas />
+      <Combined />
       {/* <Section2 /> */}
       {/* <DurerCard /> */}
       <div className="w-[100vw] h-[100vh hidden lg:flex" ref={xScrollRef}>
