@@ -1,7 +1,6 @@
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import { PerspectiveCamera } from "@react-three/drei";
 import Box from "./Box";
-import GroundPlane from "./GroundPlane";
 import React, { useEffect, useState } from "react";
 
 const MyCanvas = () => {
@@ -11,25 +10,23 @@ const MyCanvas = () => {
     const handleMouseMove = (event: MouseEvent) => {
       setMousePosition({ x: event.clientX, y: event.clientY });
     };
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
+
+    if (typeof window !== "undefined") {
+      window.addEventListener("mousemove", handleMouseMove);
+      return () => {
+        window.removeEventListener("mousemove", handleMouseMove);
+      };
+    }
   }, []);
 
   return (
-    <div>
-      <Canvas
-        style={{ height: "100vh", backgroundColor: "#111" }}
-        shadows={{ softShadows: true }}
-      >
-        <PerspectiveCamera makeDefault position={[0, 5, 20]} fov={60} />
-        <pointLight position={[0, 10, 0]} castShadow intensity={0.75} />
-        <Box mousePosition={mousePosition} />
-        <GroundPlane />
-        {/* <OrbitControls /> */}
-      </Canvas>
-    </div>
+    <Canvas style={{ height: "100vh", backgroundColor: "#111" }}>
+      <PerspectiveCamera makeDefault position={[0, 5, 35]} fov={60} />
+
+      <pointLight intensity={0.6} position={[0, 5, 10]} castShadow />
+
+      <Box mousePosition={mousePosition} width={6} height={6} depth={6} />
+    </Canvas>
   );
 };
 

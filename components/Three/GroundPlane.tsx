@@ -2,9 +2,9 @@ import { Plane } from "@react-three/drei";
 
 const GroundPlane = () => {
   return (
-    <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.5, 0]} receiveShadow>
+    <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow position={[0, -4, -50]}>
       <planeBufferGeometry attach="geometry" args={[100, 100]} />
-      <meshStandardMaterial attach="material" color="#222" />
+      <meshPhysicalMaterial attach="material" color="#fff" />
     </mesh>
   );
 };

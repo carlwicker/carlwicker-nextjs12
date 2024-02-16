@@ -97,7 +97,6 @@ export default function Home() {
         <title>Carl Wicker : Home</title>
         <meta property="og:title" content="Carl Wicker : Home" key="title" />
       </Head>
-
       <div className="flex" ref={section1Ref}>
         {/* <Section1 />
         <Section1Right /> */}
@@ -107,10 +106,9 @@ export default function Home() {
        
       </div> */}
       <Footer />
-
       <Section1 />
       {/* <PageTransition /> */}
-
+      <ThreeCanvas />
       {/* <Section2 /> */}
       {/* <DurerCard /> */}
       <div className="w-[100vw] h-[100vh hidden lg:flex" ref={xScrollRef}>
@@ -118,7 +116,6 @@ export default function Home() {
         <Section1Right />
         <Section1Right />
       </div>
-      <ThreeCanvas />
       {/* <ContactForm /> */}
       {/* <div className="hidden lg:block">
         <BoldArticlePage />
